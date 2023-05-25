@@ -1,4 +1,4 @@
-* { 
+ { 
      margin: 0; 
      padding: 0; 
      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
@@ -6,10 +6,10 @@
  } 
   
  :root { 
-     --color-darker : #30323D; 
-     --color-dark : #4D5061; 
-     --color-light : #5C80BC; 
-     --color-lighter : #E8C547; 
+     --color-darker : #F2BED1; 
+     --color-dark : #FDCEDF; 
+     --color-light : #F8E8EE; 
+     --color-lighter : #F9F5F6; 
      --font-xlarge: 2.5em; 
      --font-large: 1.5em; 
      --font-medium: 1.3em; 
