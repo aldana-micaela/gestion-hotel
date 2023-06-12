@@ -1,3 +1,7 @@
+var productosCarrito = [];
+
+
+
 function Reserva(nombre, lugar, estrella, tipohabitacion, pension, precio, cantHuespedes, fechadesde, fechahasta) {
     this.nombre = nombre;
     this.lugar = lugar;
@@ -9,62 +13,90 @@ function Reserva(nombre, lugar, estrella, tipohabitacion, pension, precio, cantH
     this.fechadesde = fechadesde;
     this.fechahasta = fechahasta;
 }
+var reservaMenor= [
+    new Reserva("Oasis Hotel", "Cordoba", "3 estrellas", "Estandar", "Media Pensión", 300000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Oasis Hotel", "Cordoba", "3 estrellas", "Premium", "Pensión completa", 38000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Hotel Los Patios", "Cordoba", "3 estrellas", "Premium", "Pensión completa", 37000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Hotel Soft Cordoba", "Cordoba", "3 estrellas", "Presidencial", "Desayuno", 40000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Hotel Soft Cordoba", "Cordoba", "3 estrellas", "Premium", "Pensión completa", 40000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Hotel Soft Cordoba", "Cordoba", "3 estrellas", "Estandar", "Media Pensión", 40000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Hotel Los Patios", "Cordoba", "3 estrellas", "Presidencial", "Desayuno", 47000, "2", '2023-06-16', '2023-06-20'),
 
-var reservaMayor = [
-    new Reserva("Hotel Mendoza", "Mendoza", "5 estrellas", "Presidencial", "Pensión Completa", 78000, 4, '2023-06-16', '2023-06-20'),
-    new Reserva("Sheraton Mendoza", "Mendoza", "5 estrellas", "Presidencial", "Pensión Completa", 60000, 4, '2023-06-16', '2023-06-20'),
-    new Reserva("Park Hyat Mendoza", "Mendoza", "5 estrellas", "Presidencial", "Pensión Completa", 58000, 4, '2023-06-16', '2023-06-20'),
-    new Reserva("Hotel Provincial", "Mendoza", "5 estrellas", "Presidencial", "Pensión Completa", 56000, 4, '2023-06-16', '2023-06-20'),
-    new Reserva("Hathor Mendoza", "Mendoza", "5 estrellas", "Presidencial", "Pensión Completa", 54000, 4, '2023-06-16', '2023-06-20'),
 
-    new Reserva("Hotel Mendoza", "Mendoza", "5 estrellas", "Premium", "Media Pensión", 50000, 4, '2023-06-16', '2023-06-20'),
-    new Reserva("Sheraton Mendoza", "Mendoza", "5 estrellas", "Premium", "Media Pensión", 50000, 4, '2023-06-16', '2023-06-20'),
-    new Reserva("Park Hyat Mendoza", "Mendoza", "5 estrellas", "Premium", "Media Pensión", 48000, 4, '2023-06-16', '2023-06-20'),
-    new Reserva("Hotel Provincial", "Mendoza", "5 estrellas", "Premium", "Media Pensión", 46000, 4, '2023-06-16', '2023-06-20'),
-    new Reserva("Hathor Mendoza", "Mendoza", "5 estrellas", "Premium", "Media Pensión", 45000, 4, '2023-06-16', '2023-06-20'),
+    new Reserva("Hathor Mendoza", "Mendoza", "4 estrellas", "Estandar", "Desayuno", 20000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Hotel Provincial", "Mendoza", "4 estrellas", "Estandar", "Desayuno", 30000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Park Hyat Mendoza", "Mendoza", "4 estrellas", "Estandar", "Desayuno", 35000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Hotel Mendoza", "Mendoza", "4 estrellas", "Estandar", "Desayuno", 40000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Sheraton Mendoza", "Mendoza", "4 estrellas", "Estandar", "Desayuno", 40000, "4", '2023-06-16', '2023-06-20'),
+   
 
-    new Reserva("Hotel Mendoza", "Mendoza", "5 estrellas", "Estandar", "Desayuno", 40000, 4, '2023-06-16', '2023-06-20'),
-    new Reserva("Sheraton Mendoza", "Mendoza", "5 estrellas", "Estandar", "Desayuno", 40000, 4, '2023-06-16', '2023-06-20'),
-    new Reserva("Park Hyat Mendoza", "Mendoza", "5 estrellas", "Estandar", "Desayuno", 35000, 4, '2023-06-16', '2023-06-20'),
-    new Reserva("Hotel Provincial", "Mendoza", "5 estrellas", "Estandar", "Desayuno", 30000, 4, '2023-06-16', '2023-06-20'),
-    new Reserva("Hathor Mendoza", "Mendoza", "5 estrellas", "Estandar", "Desayuno", 20000, 4, '2023-06-16', '2023-06-20'),
+    new Reserva("Hathor Mendoza", "Mendoza", "4 estrellas", "Premium", "Media Pensión", 45000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Hotel Provincial", "Mendoza", "4 estrellas", "Premium", "Media Pensión", 46000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Park Hyat Mendoza", "Mendoza", "4 estrellas", "Premium", "Media Pensión", 48000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Hotel Mendoza", "Mendoza", "4 estrellas", "Premium", "Media Pensión", 50000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Sheraton Mendoza", "Mendoza", "4 estrellas", "Premium", "Media Pensión", 50000, "4", '2023-06-16', '2023-06-20'),
+
+    
+    new Reserva("Rochester Bariloche", "bariloche", "5 estrellas", "Premium", "Desayuno", 56000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Hotel Soft Bariloche", "bariloche", "5 estrellas", "Premium", "Desayuno", 60000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Concorde Bariloche", "bariloche", "5 estrellas", "Premium", "Desayuno", 62000, "2", '2023-06-16', '2023-06-20'),
+
+    new Reserva("Hathor Mendoza", "Mendoza", "4 estrellas", "Presidencial", "Pensión Completa", 54000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Hotel Provincial", "Mendoza", "4 estrellas", "Presidencial", "Pensión Completa", 56000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Park Hyat Mendoza", "Mendoza", "4 estrellas", "Presidencial", "Pensión Completa", 58000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Sheraton Mendoza", "Mendoza", "4 estrellas", "Presidencial", "Pensión Completa", 60000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Hotel Mendoza", "Mendoza", "4 estrellas", "Presidencial", "Pensión Completa", 78000, "4", '2023-06-16', '2023-06-20'),
+
+    new Reserva("Rochester Bariloche", "bariloche", "5 estrellas", "Premium", "Media Completa", 78000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Concorde Bariloche", "bariloche", "5 estrellas", "Premium", "Media Completa", 79000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Hotel Soft Bariloche", "bariloche", "5 estrellas", "Premium", "Media Completa", 80000, "2", '2023-06-16', '2023-06-20'),
+
+    new Reserva("Rochester Bariloche", "bariloche", "5 estrellas", "Presidencial", "Pensión Completa", 80000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Concorde Bariloche", "bariloche", "5 estrellas", "Presidencial", "Pensión Completa", 92000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Hotel Soft Bariloche", "bariloche", "5 estrellas", "Presidencial", "Pensión Completa", 98000, "2", '2023-06-16', '2023-06-20'),
+
 
 ]
+var reservaMayor = [
+    new Reserva("Hotel Soft Bariloche", "bariloche", "5 estrellas", "Presidencial", "Pensión Completa", 98000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Concorde Bariloche", "bariloche", "5 estrellas", "Presidencial", "Pensión Completa", 92000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Rochester Bariloche", "bariloche", "5 estrellas", "Presidencial", "Pensión Completa", 80000, "2", '2023-06-16', '2023-06-20'),
+
+    new Reserva("Hotel Soft Bariloche", "bariloche", "5 estrellas", "Premium", "Media Completa", 80000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Concorde Bariloche", "bariloche", "5 estrellas", "Premium", "Media Completa", 79000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Rochester Bariloche", "bariloche", "5 estrellas", "Premium", "Media Completa", 78000, "2", '2023-06-16', '2023-06-20'),
+
+    new Reserva("Hotel Mendoza", "Mendoza", "4 estrellas", "Presidencial", "Pensión Completa", 78000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Sheraton Mendoza", "Mendoza", "4 estrellas", "Presidencial", "Pensión Completa", 60000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Park Hyat Mendoza", "Mendoza", "4 estrellas", "Presidencial", "Pensión Completa", 58000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Hotel Provincial", "Mendoza", "4 estrellas", "Presidencial", "Pensión Completa", 56000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Hathor Mendoza", "Mendoza", "4 estrellas", "Presidencial", "Pensión Completa", 54000, "4", '2023-06-16', '2023-06-20'),
+
+    new Reserva("Hotel Soft Bariloche", "bariloche", "5 estrellas", "Premium", "Desayuno", 60000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Concorde Bariloche", "bariloche", "5 estrellas", "Premium", "Desayuno", 62000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Rochester Bariloche", "bariloche", "5 estrellas", "Premium", "Desayuno", 56000, "2", '2023-06-16', '2023-06-20'),
 
 
-function filtrarReserva() {
-    let paquetesFiltrados = [];
+    new Reserva("Hotel Mendoza", "Mendoza", "4 estrellas", "Premium", "Media Pensión", 50000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Sheraton Mendoza", "Mendoza", "4 estrellas", "Premium", "Media Pensión", 50000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Park Hyat Mendoza", "Mendoza", "4 estrellas", "Premium", "Media Pensión", 48000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Hotel Provincial", "Mendoza", "4 estrellas", "Premium", "Media Pensión", 46000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Hathor Mendoza", "Mendoza", "4 estrellas", "Premium", "Media Pensión", 45000, "4", '2023-06-16', '2023-06-20'),
 
-    if (document.getElementById('precio').value == 'preciomayor') {
-        for (let reserva of reservaMayor) {
-            if (reserva.lugar.toLowerCase() === document.getElementById('lugar-hotel').value.toLowerCase()
-                && reserva.estrella.toLowerCase() === document.getElementById('hoteles-estrellas').value.toLowerCase()
-                && reserva.tipohabitacion.toLowerCase() === document.getElementById('habitacion').value.toLowerCase()
-                && reserva.pension.toLowerCase() === document.getElementById('pension').value.toLowerCase()
-                && reserva.fechadesde === document.getElementById('fecha-desde').value
-                && paquete.cantHuespedes === document.getElementById('cantidad-huesped').value) {
-                if (document.getElementById('fecha-hasta').value === '' || reserva.fechahasta === document.getElementById('fecha-hasta').value) {
-                    paquetesFiltrados.push(reserva);
-                }
-            }
-        }
-    } else {
-        for (let reserva of reservaMenor) {
-            if (reserva.lugar.toLowerCase() === document.getElementById('lugar-hotel').value.toLowerCase()
-                && reserva.estrella.toLowerCase() === document.getElementById('hoteles-estrellas').value.toLowerCase()
-                && reserva.tipohabitacion.toLowerCase() === document.getElementById('habitacion').value.toLowerCase()
-                && reserva.pension.toLowerCase() === document.getElementById('pension').value.toLowerCase()
-                && reserva.fechadesde === document.getElementById('fecha-desde').value
-                && paquete.cantHuespedes === document.getElementById('cantidad-huesped').value) {
-                if (document.getElementById('fecha-hasta').value === '' || reserva.fechahasta === document.getElementById('fecha-hasta').value) {
-                    paquetesFiltrados.push(reserva);
-                }
-            }
-        }
-    }
+    new Reserva("Hotel Mendoza", "Mendoza", "4 estrellas", "Estandar", "Desayuno", 40000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Sheraton Mendoza", "Mendoza", "4 estrellas", "Estandar", "Desayuno", 40000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Park Hyat Mendoza", "Mendoza", "4 estrellas", "Estandar", "Desayuno", 35000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Hotel Provincial", "Mendoza", "4 estrellas", "Estandar", "Desayuno", 30000, "4", '2023-06-16', '2023-06-20'),
+    new Reserva("Hathor Mendoza", "Mendoza", "4 estrellas", "Estandar", "Desayuno", 20000, "4", '2023-06-16', '2023-06-20'),
 
-    return paquetesFiltrados;
-}
+    new Reserva("Hotel Soft Cordoba", "Cordoba", "3 estrellas", "Premium", "Pensión completa", 40000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Oasis Hotel", "Cordoba", "3 estrellas", "Premium", "Pensión completa", 38000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Hotel Los Patios", "Cordoba", "3 estrellas", "Premium", "Pensión completa", 37000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Hotel Soft Cordoba", "Cordoba", "3 estrellas", "Estandar", "Media Pensión", 40000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Oasis Hotel", "Cordoba", "3 estrellas", "Estandar", "Media Pensión", 300000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Hotel Los Patios", "Cordoba", "3 estrellas", "Presidencial", "Desayuno", 47000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Hotel Soft Cordoba", "Cordoba", "3 estrellas", "Presidencial", "Desayuno", 40000, "2", '2023-06-16', '2023-06-20')
+]
 function eliminarDiv(nombreDiv) {
     var div = document.getElementById(nombreDiv);
     if (div != null) {
@@ -95,15 +127,50 @@ function crearDivListaProductos() {
 
     return div;
 }
+function filtrar(){
+var reservas=[];
+if(document.getElementById('precio')==='preciomayor'){
+for (let reserva of reservaMayor) {
+if (reserva.lugar.toLowerCase() === document.getElementById('lugar-hotel').value.toLowerCase()
+    && reserva.estrella.toLowerCase() === document.getElementById('hoteles-estrellas').value.toLowerCase()
+    && reserva.tipohabitacion.toLowerCase() === document.getElementById('habitacion').value.toLowerCase()
+    && reserva.pension.toLowerCase() === document.getElementById('pension').value.toLowerCase()
+    && reserva.fechadesde === document.getElementById('fecha-desde').value
+    && reserva.cantHuespedes === document.getElementById('cantidad-huesped').value
+    && reserva.fechahasta === document.getElementById('fecha-hasta').value
+) {
+    reservas.push(reserva);
 
+}}}else{
+    for (let reserva of reservaMenor) {
+        if (reserva.lugar.toLowerCase() === document.getElementById('lugar-hotel').value.toLowerCase()
+            && reserva.estrella.toLowerCase() === document.getElementById('hoteles-estrellas').value.toLowerCase()
+            && reserva.tipohabitacion.toLowerCase() === document.getElementById('habitacion').value.toLowerCase()
+            && reserva.pension.toLowerCase() === document.getElementById('pension').value.toLowerCase()
+            && reserva.fechadesde === document.getElementById('fecha-desde').value
+            && reserva.cantHuespedes === document.getElementById('cantidad-huesped').value
+            && reserva.fechahasta === document.getElementById('fecha-hasta').value
+        ) {
+            reservas.push(reserva);
+        
+        }
+}
+}
+return reservas;
+}
 function mostrarReserva() {
     var divLista = crearDivListaProductos();
+    var reservas= filtrar();
 
     var ul = document.createElement('ul');
-    
+    console.log(document.getElementById('lugar-hotel').value.toLowerCase(), document.getElementById('hoteles-estrellas').value.toLowerCase(), document.getElementById('habitacion').value.toLowerCase()
+        , document.getElementById('pension').value.toLowerCase()
+        , document.getElementById('fecha-desde').value
+        , document.getElementById('cantidad-huesped').value);
 
-    if (reservaMayor.length != 0 && document.getElementById('precio').value == 'precio-mayor') {
-        for (let reserva of reservaMayor) {
+
+    if (reservas.length != 0) {
+        for (let reserva of reservas) {
             var li = document.createElement('li');
             var button = document.createElement('button');
             button.style.cssText = `
@@ -131,29 +198,19 @@ function mostrarReserva() {
             button.textContent = 'Agregar a carrito';
 
 
-            if (reserva.lugar.toLowerCase() === document.getElementById('lugar-hotel').value.toLowerCase()
-                && reserva.estrella.toLowerCase() === document.getElementById('hoteles-estrellas').value.toLowerCase()
-                && reserva.tipohabitacion.toLowerCase() === document.getElementById('Tipo-habitacion').value.toLowerCase()
-                && reserva.pension.toLowerCase() === document.getElementById('pension').value.toLowerCase()
-                && reserva.fechadesde === document.getElementById('fecha-desde').value
-                && paquete.cantHuespedes === document.getElementById('cantidad-huesped').value) {
-                if (document.getElementById('fecha-hasta').value === '' || reserva.fechahasta === document.getElementById('fecha-hasta').value) {
-                    paquetesFiltrados.push(reserva);
-
+            
                     li.innerHTML =
                         "Ubicación: " + reserva.lugar + "<br>" +
                         "Fecha desde: " + reserva.fechadesde + "<br>" +
                         "Fecha hasta: " + reserva.fechahasta + "<br>" +
                         "Precio: $" + reserva.precio + "<br>";
-                    agregarACarrito(button, li.innerHTML);
+                    agregarACarrito(button, li);
                     li.className = "li-lista-productos";
                     li.appendChild(button);
                     ul.appendChild(li);
-                }
-            }
-        }
-
-
+                    coincidencia = true;
+                }      
+        
         divLista.appendChild(ul);
         document.getElementById('container-filtros').appendChild(divLista);
 
@@ -168,4 +225,22 @@ function crearEncabezadoSinCoindicenciasBusqueda() {
     h3.textContent = 'No hay coincidencias con los filtros de su búsqueda';
     return h3;
 }
+
+function alertaProductosCarrito(contenidoProducto) {
+    var productos = JSON.parse(sessionStorage.getItem("productos-carrito"));
+
+    if (productos) {
+        if (!productos.includes(contenidoProducto)) {
+            alert("Producto agregado a carrito");
+        }
+    }
+}
+
+function agregarACarrito(boton, contenidoProducto) {
+    boton.addEventListener("click", () => {
+        productosCarrito.push(contenidoProducto);
+        alertaProductosCarrito(contenidoProducto);
+    });
+}
+
 
