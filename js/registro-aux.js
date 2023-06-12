@@ -46,6 +46,11 @@ function createBoxCard() {
     card_expiration.setAttribute("placeholder", "Fecha de expiración");
     card_code.setAttribute("placeholder", "Código de seguridad");
 
+    card_name.setAttribute("required", "");
+    card_number.setAttribute("required", "");
+    card_expiration.setAttribute("required", "");
+    card_code.setAttribute("required", "");
+
     card_name.id = "card-name";
     card_number.id = "card-number";
     card_code.id = "card-code";
@@ -75,6 +80,9 @@ function createBoxMP(){
     mp_cvu.setAttribute("placeholder", "CVU");
     mp_alias.setAttribute("placeholder", "Alias");
 
+    mp_cvu.setAttribute("required", "");
+    mp_alias.setAttribute("required", "");
+
     mp_cvu.id = "mp-cvu";
     mp_alias.id = "mp-alias";
 
@@ -93,6 +101,8 @@ function createBoxTransfer(){
 
     cbu.setAttribute("type", "number");
     cbu.setAttribute("placeholder", "CBU");
+
+    cbu.setAttribute("required", "");
 
     cbu.id = "cbu";
 
