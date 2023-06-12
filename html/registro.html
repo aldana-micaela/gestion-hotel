@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/registro.css">
+</head>
+
+<body>
+    <div class="container">
+        <main class="form-box-register form-box">
+            <h2 class="title">Registro</h2>
+            <form id="register-form" class="form">
+                <label>Nombre</label>
+                <input class="form-input" placeholder="Ingrese nombre" type="text" name="firstname" required>
+
+                <label>Apellido</label>
+                <input class="form-input" placeholder="Ingrese apellido" type="text" name="lastname" required>
+
+                <label>DNI</label>
+                <input class="form-input" placeholder="Ingrese DNI" type="number" min="1000000" max="999999999" name="dni" required>
+
+                <label>Fecha de nacimiento</label>
+                <input class="form-input" type="date" name="birthday" id="birthday" min="1923-06-16" max="2005-06-16" required>
+
+                <label>Email</label>
+                <input class="form-input" placeholder="Ingrese email" type="email" name="email" required>
+
+                <label>Contraseña</label>
+                <input class="form-input" placeholder="Ingrese contraseña" type="password" name="password" required>
+
+                <label>Domicilio</label>
+                <input class="form-input" placeholder="Buenos Aires, CABA, Callao 1030" type="text" name="address" required>
+
+                <label>Medio de Pago</label>
+                <select class="form-input" name="payment" id="payment" placeholder="Seleccione un medio de pago" required>
+                    <option value="cash" selected>Efectivo</option>
+                    <option value="credit">Tarjeta de crédito</option>
+                    <option value="debit">Tarjeta de débito</option>
+                    <option value="mp">MercadoPago</option>
+                    <option value="transfer">Transferencia bancaria</option>
+                </select>
+
+                <section id="payment-box">
+
+                </section>
+
+
+                <button type="submit" class="btn">Registrarse</button>
+            </form>
+        </main>
+    </div>
+    <script src="../js/registro.js"></script>
+    <script src="../js/registro-aux.js"></script>
+    <script src="../js/userDB.js"></script>
+</body>
+
+</html>

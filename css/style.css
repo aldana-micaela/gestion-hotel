@@ -5,14 +5,24 @@
     box-sizing: border-box;
 }
 
-:root {
+:root {
     --color-darker: #F2BED1;
     --color-dark: #FDCEDF;
     --color-light: #F8E8EE;
     --color-lighter: #F9F5F6;
+    --color-highlight: rgb(160, 113, 166);
     --font-xlarge: 2.5em;
     --font-large: 1.5em;
     --font-medium: 1.3em;
     --font-small: 1.2em;
     --font-xsmall: .9em;
+}
+
+input[type=number], input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+input:focus {
+     outline: 3px dashed var(--color-lighter);
 }
