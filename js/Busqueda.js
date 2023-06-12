@@ -1,5 +1,9 @@
 var productosCarrito = [];
 
+ function carritos() {
+    console.log(productosCarrito);
+    sessionStorage.setItem("texto-carrito", JSON.stringify(productosCarrito));
+}
 
 
 function Reserva(nombre, lugar, estrella, tipohabitacion, pension, precio, cantHuespedes, fechadesde, fechahasta) {
@@ -234,13 +238,19 @@ function alertaProductosCarrito(contenidoProducto) {
             alert("Producto agregado a carrito");
         }
     }
+
 }
 
 function agregarACarrito(boton, contenidoProducto) {
     boton.addEventListener("click", () => {
         productosCarrito.push(contenidoProducto);
+        console.log(productosCarrito);
+
         alertaProductosCarrito(contenidoProducto);
     });
 }
 
 
+function getCarrito(){
+    return productosCarrito;
+}
