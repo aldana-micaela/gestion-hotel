@@ -4,8 +4,13 @@ const form = document.getElementById("register-form");
 document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (e) {
         e.preventDefault();
+        //ToDo! validarDatos()
         const new_user = createUser();
-        console.log("Usuario creado: " + new_user);
+        console.log("Usuario creado:");
+        console.log(new_user);
+        if (!existsUser(new_user)) {
+            registerNewUser(new_user);
+        }
     });
 });
 

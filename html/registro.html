@@ -15,28 +15,28 @@
             <h2 class="title">Registro</h2>
             <form id="register-form" class="form">
                 <label>Nombre</label>
-                <input class="form-input" placeholder="Ingrese nombre" type="text" name="firstname">
+                <input class="form-input" placeholder="Ingrese nombre" type="text" name="firstname" required>
 
                 <label>Apellido</label>
-                <input class="form-input" placeholder="Ingrese apellido" type="text" name="lastname">
+                <input class="form-input" placeholder="Ingrese apellido" type="text" name="lastname" required>
 
                 <label>DNI</label>
-                <input class="form-input" placeholder="Ingrese DNI" type="number" min="1000000" max="999999999" name="dni">
+                <input class="form-input" placeholder="Ingrese DNI" type="number" min="1000000" max="999999999" name="dni" required>
 
                 <label>Fecha de nacimiento</label>
-                <input class="form-input" type="date" name="birthday" id="birthday" min="1923-06-16" max="2005-06-16">
+                <input class="form-input" type="date" name="birthday" id="birthday" min="1923-06-16" max="2005-06-16" required>
 
                 <label>Email</label>
-                <input class="form-input" placeholder="Ingrese email" type="email" name="email" >
+                <input class="form-input" placeholder="Ingrese email" type="email" name="email" required>
 
                 <label>Contraseña</label>
-                <input class="form-input" placeholder="Ingrese contraseña" type="password" name="password">
+                <input class="form-input" placeholder="Ingrese contraseña" type="password" name="password" required>
 
                 <label>Domicilio</label>
-                <input class="form-input" placeholder="Buenos Aires, CABA, Callao 1030" type="text" name="address">
+                <input class="form-input" placeholder="Buenos Aires, CABA, Callao 1030" type="text" name="address" required>
 
                 <label>Medio de Pago</label>
-                <select class="form-input" name="payment" id="payment" placeholder="Seleccione un medio de pago">
+                <select class="form-input" name="payment" id="payment" placeholder="Seleccione un medio de pago" required>
                     <option value="cash" selected>Efectivo</option>
                     <option value="credit">Tarjeta de crédito</option>
                     <option value="debit">Tarjeta de débito</option>
