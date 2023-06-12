@@ -31,97 +31,97 @@
     <main>
         <div class="background-filtros" id="container-filtros">
 
-            
+
             <div class="filtros" id="filtros">
                 <h2 id="cabecera"> Búsqueda de hoteles </h2>
 
                 <div class="filtro-hotel">
                     <div>
-                        <select class="hoteles-estrellas">
-                            <form>
-                                <option name="tipo" id="1 estrellas"> 1 Estrella</option>
-        
-                                <option  name="tipo" id="2 estrellas">2 Estrellas</option>
-                                <option name="tipo" id="3 estrellas"> 3 Estrella</option>
-            
-                              <option name="tipo" id="4 estrellas">4 Estrellas</option>
-                              <option name="tipo" id="5 estrellas"> 5 Estrella</option>
-                
-                                        
-                            </form>
+                        <select id="hoteles-estrellas">
+
+                            <option name="tipo" id="1estrella"> 1 Estrella</option>
+
+                            <option name="tipo" id="2estrellas">2 Estrellas</option>
+                            <option name="tipo" id="3estrellas"> 3 Estrellas</option>
+
+                            <option name="tipo" id="4estrellas">4 Estrellas</option>
+                            <option name="tipo" id="5estrellas"> 5 Estrellas</option>
+
+
+
                         </select>
-                        <label for="hotel-lugar">
+                        <label >
                             Lugar
-                            <input class="campos" type="text" id="lugar-hotel" required 
-                            placeholder="Ingresa a donde queres ir"> 
+                            <input class="campos" type="text" id="lugar-hotel" required
+                                placeholder="Ingresa a donde queres ir">
                         </label>
 
                     </div>
                     <div class="Tipo-habitacion">
-                    
-                       
-                            <select name="Tipo-habitacion" id="habitacion">
-                                <option value="tipo-estandar">Estandar</option>
-                                <option value="tipo-premium">Premium</option>
-                                <option value="tipo-presidencial">Presidencial</option>
-                            </select>
-                            
-                    
-                </div>
-                <div class="pension">
-                    <select name="pension" id="pension">
-                        <option value="Desayuno">Desayuno</option>
-                        <option value="Media-pension">Media pensión</option>
-                        <option value="pension-completa">Pensión completa</option>
-                    </select>
-                    
-                </div>
+
+
+                        <select name="Tipo-habitacion" id="habitacion">
+                            <option value="estandar">Estandar</option>
+                            <option value="premium">Premium</option>
+                            <option value="presidencial">Presidencial</option>
+                        </select>
+
+
+                    </div>
+                    <div class="pension">
+                        <select name="pension" id="pension">
+                            <option value="Desayuno">Desayuno</option>
+                            <option value="Media pensión">Media pensión</option>
+                            <option value="pensión completa">Pensión completa</option>
+                        </select>
+
+                    </div>
 
                     <div>
-                        <label for="cantidad"> 
+                        <label>
                             Cantidad huespedes
                             <input class="campos" type="number" min="1" max="5" id="cantidad-huesped" required
-                            placeholder="Ingrese cantidad de huespedes">
+                                placeholder="Ingrese cantidad de huespedes">
                         </label>
                     </div>
                 </div>
-                
-                    <select name="precio" id="precio">
-                        <option name="tipo" id="preciomayor">Precio mayor</label>
 
-                        <option name="tipo" id="precio-menor">Precio menor</label>
-                        </select>  
+                <select name="precio" id="precio">
+                    <option name="tipo" id="preciomayor">Precio mayor</label>
 
-                        <div>
-                            <label id="fecha-desde"> Fecha Desde
-                                <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
-                                id="fecha-desde"  required>
-                            </label>
-    
-                            <div >
-                                <label id="fecha-hasta"> Fecha Hasta
-                                    <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
-                                    id="fecha-hasta"   >
-                                </label>
-                            </div>
-                        </div>
-    
-                   
-                
+                    <option name="tipo" id="preciomenor">Precio menor</label>
+                </select>
+
+                <div>
+                    <label id="fecha-d"> Fecha Desde
+                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                            id="fecha-desde" required>
+                    </label>
+
+                    <div>
+                        <label id="fecha-h"> Fecha Hasta
+                            <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                                id="fecha-hasta">
+                        </label>
+                    </div>
+                </div>
+
+
+
 
                 <input class="btn-buscar" type="submit" value=" Buscar" onclick="mostrarReserva()"></input>
             </div>
 
 
-        
+
     </main>
 
-    
+
     <footer>
-        
+
     </footer>
-  
-<script src="../js/Busqueda.js"></script>
+
+    <script src="../js/Busqueda.js"></script>
 </body>
 
 </html>
