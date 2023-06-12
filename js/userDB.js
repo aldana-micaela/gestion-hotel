@@ -8,9 +8,26 @@ let current_users = JSON.parse(localStorage.getItem('users'))
         new User("Cosme", "Fulanito", "87654321", "2005-06-16", "cosme@fulanito.com", "mundohola", "Shelbyville, Calle Verdadera 321", "credit", cosme_payment_data)
     ];
 
-console.log("Todos los usuarios:" + current_users);
+console.log("Todos los usuarios:");
+console.log(current_users);
 
-//TODO
-function existsUser(user){
+function existsUser(new_user){
+    for(let i = 0; i < current_users.length; i++) {
+        if(current_users[i].dni === new_user.dni) {
+            alert("Existe usuario registrado con ese DNI");
+            return true;
+        }
+        if(current_users[i].email === new_user.email) {
+            alert("Existe usuario registrado con ese email");
+            return true;
+        }
+    }
+
     return false;
+}
+
+function registerNewUser(new_user) {
+    current_users.push(new_user);
+    localStorage.setItem('users', JSON.stringify(current_users));
+    alert("Registro exitoso");
 }
