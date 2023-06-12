@@ -11,7 +11,6 @@ payment_option.addEventListener('change', function(){
 });
 
 function createPaymentBox(payment) {
-    console.log("AAAAA")
     let created_box;
 
     if (payment === "credit" || payment === "debit") {
@@ -22,13 +21,15 @@ function createPaymentBox(payment) {
 
     } else if (payment == "transfer") {
         created_box = createBoxTransfer();
+    } else {
+        return;
     }
 
     payment_box.appendChild(created_box);
+
 }
 
 function createBoxCard() {
-    console.log("process");
     const box = document.createElement("DIV");
     const card_name = document.createElement("INPUT");
     const card_number = document.createElement("INPUT");
@@ -44,6 +45,11 @@ function createBoxCard() {
     card_number.setAttribute("placeholder", "Número de tarjeta");
     card_expiration.setAttribute("placeholder", "Fecha de expiración");
     card_code.setAttribute("placeholder", "Código de seguridad");
+
+    card_name.id = "card-name";
+    card_number.id = "card-number";
+    card_code.id = "card-code";
+    card_expiration.id = "card-expiration";
 
     card_name.classList.add("form-input");
     card_number.classList.add("form-input");
@@ -69,6 +75,9 @@ function createBoxMP(){
     mp_cvu.setAttribute("placeholder", "CVU");
     mp_alias.setAttribute("placeholder", "Alias");
 
+    mp_cvu.id = "mp-cvu";
+    mp_alias.id = "mp-alias";
+
     mp_cvu.classList.add("form-input");
     mp_alias.classList.add("form-input");
 
@@ -81,9 +90,15 @@ function createBoxMP(){
 function createBoxTransfer(){
     const box = document.createElement("DIV");
     const cbu = document.createElement("INPUT");
+
     cbu.setAttribute("type", "number");
     cbu.setAttribute("placeholder", "CBU");
+
+    cbu.id = "cbu";
+
     cbu.classList.add("form-input");
+
     box.appendChild(cbu);
+
     return box;
 }

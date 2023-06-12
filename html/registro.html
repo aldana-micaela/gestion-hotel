@@ -15,7 +15,7 @@
             <h2 class="title">Registro</h2>
             <form id="register-form" class="form">
                 <label>Nombre</label>
-                <input class="form-input" placeholder="Ingrese nombre" type="text" name="username">
+                <input class="form-input" placeholder="Ingrese nombre" type="text" name="firstname">
 
                 <label>Apellido</label>
                 <input class="form-input" placeholder="Ingrese apellido" type="text" name="lastname">
@@ -36,7 +36,7 @@
                 <input class="form-input" placeholder="Buenos Aires, CABA, Callao 1030" type="text" name="address">
 
                 <label>Medio de Pago</label>
-                <select class="form-input"name="type" id="payment" placeholder="Seleccione un medio de pago">
+                <select class="form-input" name="payment" id="payment" placeholder="Seleccione un medio de pago">
                     <option value="cash" selected>Efectivo</option>
                     <option value="credit">Tarjeta de crédito</option>
                     <option value="debit">Tarjeta de débito</option>
@@ -55,6 +55,7 @@
     </div>
     <script src="../js/registro.js"></script>
     <script src="../js/registro-aux.js"></script>
+    <script src="../js/userDB.js"></script>
 </body>
 
 </html>
