@@ -45,7 +45,7 @@ function isValidInput() {
         first_name : first_name.length > 1 && /^((?![0-9.,!?:;_|+\-*\\/=%°@&#§$"'`¨^ˇ()\[\]<>{}])[\S])+$/.test(first_name),
         last_name : last_name.length > 1 && /^((?![0-9.,!?:;_|+\-*\\/=%°@&#§$"'`¨^ˇ()\[\]<>{}])[\S])+$/.test(last_name),
         dni: dni.length > 7 && dni.length < 12 && /^\d+$/.test(dni),
-        birthday : '1923-16-06' < birthday && birthday < '2005-06-16',
+        birthday : '1923-06-16' < birthday && birthday < '2005-06-16',
         email: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email),
         password : /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z])(?=.*[.,*!#$%&='¿+¡?]).{8,}$/.test(password), //8 caracteres con al menos {1 mayus, 1 minus, 1 símbolo}
         address : /^(?:[\w+\s*]+\s*,\s*\w+\s*\w*){2}$/.test(address), //Tres oraciones separadas por dos comas 
