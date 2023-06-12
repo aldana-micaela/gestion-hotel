@@ -14,8 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (e) {
         e.preventDefault();
         if (!isValidInput()) {
-            //ToDo! Mostrar mensaje dependiendo del error
-            alert("Ingrese los datos correctamente");
             return;
         }
 
@@ -43,18 +41,75 @@ function readInput() {
 
 function isValidInput() {
     readInput();
+    const input = {
+        first_name : first_name.length > 1 && /^((?![0-9.,!?:;_|+\-*\\/=%°@&#§$"'`¨^ˇ()\[\]<>{}])[\S])+$/.test(first_name),
+        last_name : last_name.length > 1 && /^((?![0-9.,!?:;_|+\-*\\/=%°@&#§$"'`¨^ˇ()\[\]<>{}])[\S])+$/.test(last_name),
+        dni: dni.length > 7 && dni.length < 12 && /^\d+$/.test(dni),
+        birthday : '1923-16-06' < birthday && birthday < '2005-06-16',
+        email: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email),
+        password : /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z])(?=.*[.,*!#$%&='¿+¡?]).{8,}$/.test(password), //8 caracteres con al menos {1 mayus, 1 minus, 1 símbolo}
+        address : /^(?:[\w+\s*]+\s*,\s*\w+\s*\w*){2}$/.test(address), //Tres oraciones separadas por dos comas 
+        payment : ['cash', 'credit', 'debit', 'mp', 'transfer'].includes(payment),
+        payment_data : isValidPaymentData()
+    };
 
-    const vaild_first_name = first_name.length > 1 && /^((?![0-9.,!?:;_|+\-*\\/=%°@&#§$"'`¨^ˇ()\[\]<>{}])[\S])+$/.test(first_name);
-    const vaild_last_name = last_name.length > 1 && /^((?![0-9.,!?:;_|+\-*\\/=%°@&#§$"'`¨^ˇ()\[\]<>{}])[\S])+$/.test(last_name);
-    const valid_dni = dni.length > 7 && dni.length < 12 && /^\d+$/.test(dni);
-    const valid_birthday = '1923-16-06' < birthday && birthday < '2005-06-16';
-    const valid_email = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email);
-    const valid_password = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z])(?=.*[.,*!#$%&='¿+¡?]).{8,}$/.test(password); //8 caracteres con al menos {1 mayus, 1 minus, 1 símbolo}
-    const valid_address =/^(?:[\w+\s*]+\s*,\s*\w+\s*\w*){2}$/.test(address); //Tres oraciones separadas por dos comas 
-    const valid_payment = ['cash', 'credit', 'debit', 'mp', 'transfer'].includes(payment);
-    const valid_payment_data =  isValidPaymentData();
+    return checkValidityMessage(input);
+}
 
-    return vaild_first_name && vaild_last_name && valid_dni && valid_birthday && valid_email && valid_password && valid_address && valid_payment && valid_payment_data;
+function checkValidityMessage(input){
+    let isValid = true;
+    let errorMessage = [];
+
+    if (!input.first_name) {
+        errorMessage.push("Nombre no válido");
+        isValid = false;
+    }
+
+    if (!input.last_name) {
+        errorMessage.push("Apellido no válido");
+        isValid = false;
+    }
+
+    if (!input.dni) {
+        errorMessage.push("DNI no válido");
+        isValid = false;
+    }
+
+    if (!input.birthday){
+        errorMessage.push("Fecha de nacimiento no válida");
+        isValid = false;
+    }
+
+    if (!input.email){
+        errorMessage.push("Email no válido");
+        isValid = false;
+    }
+
+    if (!input.password){
+        errorMessage.push("Contraseña no válida");
+        isValid = false;
+    }
+
+    if (!input.address){
+        errorMessage.push("Dirección no válida");
+        isValid = false;
+    }
+
+    if (!input.payment){
+        errorMessage.push("Medio de pago no válido");
+        isValid = false;
+    }
+
+    if (!input.payment_data){
+        errorMessage.push("Datos de pago no válidos");
+        isValid = false;
+    }
+
+    if (!isValid) {
+        alert(errorMessage);
+    }
+
+    return isValid;
 }
 
 function isValidPaymentData() {
