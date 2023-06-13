@@ -1,0 +1,141 @@
+*{
+    font-family: 'Overpass', sans-serif;
+    color: #000;
+    margin: 0;
+}
+body{
+    background-color: #F9F5F6;
+}
+header{
+    margin: 0px;
+    background-color: #F2BED1;
+    padding:10px;
+}
+#menu_navegacion{
+    display: inline-flex; 
+    float: right;
+}
+#logo{
+    display: inline-flex; 
+    margin:0;
+    text-align: left;   
+}
+
+img{
+    margin-top:-10%;
+    padding:0;
+    display: inline-flex;
+    
+}
+#menu_listado{
+    list-style-type:none;
+    text-align: right;
+}
+    
+#menu_listado li{
+    display: inline-block;        
+}
+    
+#menu_listado li a{
+    padding:10px 20px;
+    display:inline-block; 
+    text-decoration:none;
+    color:black;     
+}
+    
+ #form_idioma{    
+    margin:auto;
+    text-align: right;
+}
+
+#pie_pagina{
+    background-color: #FDCEDF;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    height: 40px;
+    width: 100%;
+}
+
+#info{
+    display:block; 
+    text-align: center;
+    text-decoration:none;
+    color:black;     
+}
+
+.wrapper h2{
+    text-align: left;
+    padding: 10px;
+    margin-top: 2%;
+    margin-left: 10%;
+}
+
+.wrapper button{
+
+    padding: 10px;
+    text-align:center ;
+    margin-left:44%;
+    background-image: url("../icons/button.png");
+    border-radius:5%;
+    border-color: #000;
+    border-width:1px ;
+}
+
+.wrapper button:hover{
+    border-width:1px ;
+    border-color: #F2BED1;
+}
+
+#form_reclamo{
+margin-left: 30%;
+margin-right: 30%;
+display:block;
+padding: 4%;
+background-color: #F8E8EE;
+
+}
+
+#form_reclamo label{
+    display:block;
+}
+#nombre_reclamo{
+    width: 100%;
+}
+#descripcion_reclamo{
+
+    height: 100px;
+    width: 100%;
+}
+#confirmar{
+    text-align: center;
+}
+
+#contenedorTicket{
+    margin-left: 32%;
+    margin-right: 38%;
+    padding: 2.5%;
+    background-color:#F8E8EE;
+    display:inline-block;
+}
+
+#ticket{
+    border-collapse: collapse; 
+}
+#ticket tr,th,td{
+     
+    padding:10px;
+  
+    border-color:#000;
+    border-width: 1px;
+    background-color:white;
+    border-style: solid;
+    width:auto;
+    text-align:left;
+    font-weight: normal;
+    
+}
+#ticket #titulo, #nmbrPortal{
+    text-align:center;
+    font-weight: bold;
+}
