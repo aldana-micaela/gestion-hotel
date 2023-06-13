@@ -235,11 +235,11 @@ function crearEncabezadoSinCoindicenciasBusqueda() {
 
 function alertaProductosCarrito(contenidoProducto) {
     var productos = JSON.parse(sessionStorage.getItem("productos-carrito"));
-    if (productos) {
+    
         if (!productos.includes(contenidoProducto)) {
             alert("Producto agregado a carrito");
         }
-    }
+    
 
 }
 
