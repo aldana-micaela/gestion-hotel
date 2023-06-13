@@ -1,12 +1,13 @@
 var productosCarrito = [];
 var carritoPrueba =[];
 
-document.getElementById("carrito-nav").addEventListener("click", function () {
-    console.log(productosCarrito);
-    sessionStorage.setItem("texto-carrito", JSON.stringify(productosCarrito));
-});
+function mostrarCarrito(){
+  
+        console.log(productosCarrito);
+        sessionStorage.setItem("texto-carrito", JSON.stringify(productosCarrito));
 
 
+}
 
 
 function Reserva(nombre, lugar, estrella, tipohabitacion, pension, precio, cantHuespedes, fechadesde, fechahasta) {
@@ -20,6 +21,7 @@ function Reserva(nombre, lugar, estrella, tipohabitacion, pension, precio, cantH
     this.fechadesde = fechadesde;
     this.fechahasta = fechahasta;
 }
+
 var reservaMenor= [
     new Reserva("Oasis Hotel", "Cordoba", "3 estrellas", "Estandar", "Media Pensión", 300000, "2", '2023-06-16', '2023-06-20'),
     new Reserva("Oasis Hotel", "Cordoba", "3 estrellas", "Premium", "Pensión completa", 38000, "2", '2023-06-16', '2023-06-20'),
@@ -104,6 +106,8 @@ var reservaMayor = [
     new Reserva("Hotel Los Patios", "Cordoba", "3 estrellas", "Presidencial", "Desayuno", 47000, "2", '2023-06-16', '2023-06-20'),
     new Reserva("Hotel Soft Cordoba", "Cordoba", "3 estrellas", "Presidencial", "Desayuno", 40000, "2", '2023-06-16', '2023-06-20')
 ]
+
+
 function eliminarDiv(nombreDiv) {
     var div = document.getElementById(nombreDiv);
     if (div != null) {
@@ -132,12 +136,12 @@ function crearDivListaProductos() {
         background-color: #494cf8;
     `;
 
-    return div;
+     return div;
 }
 
 function filtrar(){
 var reservas=[];
-if(document.getElementById('precio')==='preciomayor'){
+if(document.getElementById("precio").value ==="preciomayor"){
 for (let reserva of reservaMayor) {
 if (reserva.lugar.toLowerCase() === document.getElementById('lugar-hotel').value.toLowerCase()
     && reserva.estrella.toLowerCase() === document.getElementById('hoteles-estrellas').value.toLowerCase()
@@ -206,8 +210,6 @@ function mostrarReserva() {
 
             button.textContent = 'Agregar a carrito';
 
-
-            
                     li.innerHTML =
                         "Ubicación: " + reserva.lugar + "<br>" +
                         "Fecha desde: " + reserva.fechadesde + "<br>" +
@@ -238,12 +240,11 @@ function crearEncabezadoSinCoindicenciasBusqueda() {
 function alertaProductosCarrito(contenidoProducto, reserva) {
     var productos = JSON.parse(sessionStorage.getItem("productos-carrito"));
     
-    if (productos) {
         if (!carritoPrueba.includes(reserva) ) {
             carritoPrueba.push(reserva);
             alert("Producto agregado a carrito");
         }
-    }
+
 
 }
 

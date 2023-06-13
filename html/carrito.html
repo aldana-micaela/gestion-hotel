@@ -1,81 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
     <title>Carrito de compras</title>
-     <link rel="stylesheet" href="../css/style.css">
-     <link rel="stylesheet" href="../css/style-header.css">
-    
-    
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-header.css">
+    <link rel="stylesheet" href="../css/carrito.css">
+
+
 </head>
 
 <body>
     <header>
-        <a href="../index.html"><span class="logo-container"><img src="../icons/hat.png" class="logo"
-                    alt="hat-logo"><p><span class="selected-letter">H</span>oteles <span class="selected-letter">A</span>l <span class="selected-letter">T</span>oque</p></span></a>
+        <a href="./index.html"><span class="logo-container"><img src="../icons/hat.png" class="logo" alt="hat-logo">
+                <p><span class="selected-letter">H</span>oteles <span class="selected-letter">A</span>l <span
+                        class="selected-letter">T</span>oque</p>
+            </span></a>
         <nav class="nav-container">
-    
+
         </nav>
     </header>
 
-    <div class="container-productos-carrito">
-    
+
+    <main>
+
         <h2 id="cabecera-lista-carrito"> Carrito </h2>
-        <div class="lista-productos-carrito" id="carrito">
-            <ul id="lista-productos">
-    </ul>
-    <script>
-         var productosCarrito = JSON.parse(sessionStorage.getItem("productos-carrito"));
-        if (productosCarrito == null) {
-            productosCarrito = [];
-        }
-        let contenidoProductos = JSON.parse(sessionStorage.getItem("texto-carrito"));
+
+        <div class="container-productos-carrito">
+
+            <div class="lista-productos-carrito" id="carrito">
+                <ul id="lista-productos">
+                </ul>
+                <script>
+                    var productosCarrito = JSON.parse(sessionStorage.getItem("productos-carrito"));
+                    if (productosCarrito == null) {
+                        productosCarrito = [];
+                    }
+                    let contenidoProductos = JSON.parse(sessionStorage.getItem("texto-carrito"));
 
 
-        if (contenidoProductos) {
-            for (let i = 0; i < contenidoProductos.length; i++) {
-                if (!productosCarrito.includes(contenidoProductos[i])) {
-                    productosCarrito.push(contenidoProductos[i]);
-                }
-            }
-            sessionStorage.setItem("productos-carrito", JSON.stringify(productosCarrito));
-        }
+                    if (contenidoProductos) {
+                        for (let i = 0; i < contenidoProductos.length; i++) {
+                            if (!productosCarrito.includes(contenidoProductos[i])) {
+                                productosCarrito.push(contenidoProductos[i]);
+                            }
+                        }
+                        sessionStorage.setItem("productos-carrito", JSON.stringify(productosCarrito));
+                    }
 
 
-        if (productosCarrito) {
-            productosCarrito.forEach(producto => {
-                let li = document.createElement('li');
+                    if (productosCarrito) {
+                        productosCarrito.forEach(producto => {
+                            let li = document.createElement('li');
 
-                li.innerHTML = producto;
-                li.className = "li-lista-productos";
+                            li.innerHTML = producto;
+                            li.className = "li-lista-productos";
 
-                var button = document.createElement('button');
-                button.textContent = "Borrar producto";
-                button.style.cssText = crearStyleBotonEliminarProducto();
+                            var button = document.createElement('button');
+                            button.textContent = "Borrar producto";
+                            button.style.cssText = crearStyleBotonEliminarProducto();
 
-                button.addEventListener('click', function(){
-                    let indiceProductos = productosCarrito.indexOf(producto);
+                            button.addEventListener('click', function () {
+                                let indiceProductos = productosCarrito.indexOf(producto);
 
-                    productosCarrito.splice(indiceProductos, 1);
+                                productosCarrito.splice(indiceProductos, 1);
 
-                    sessionStorage.setItem("productos-carrito", JSON.stringify(productosCarrito));
-                    sessionStorage.removeItem("texto-carrito");
+                                sessionStorage.setItem("productos-carrito", JSON.stringify(productosCarrito));
+                                sessionStorage.removeItem("texto-carrito");
 
-                    location.reload();
-                    
-                });
-                li.appendChild(button);
-                document.querySelector('#lista-productos').appendChild(li);
-            });
-        }
+                                location.reload();
+
+                            });
+                            li.appendChild(button);
+                            document.querySelector('#lista-productos').appendChild(li);
+                        });
+                    }
 
 
-        function crearStyleBotonEliminarProducto() {
-            return `
+                    function crearStyleBotonEliminarProducto() {
+                        return `
                 height: 30px; 
                 padding-left: 5px;
                 padding-right: 5px;  
@@ -87,27 +94,21 @@
                 width: 150px;   
                 cursor: pointer;
                 transition: 0.5s all;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
                 color: #ffffff;
                 cursor: pointer;
                 transition: 0.5s all;
                 border: none;
                 `;
-        }
-    </script>
+                    }
+                </script>
 
-        
-    </script>
-    </div>
-    <button class="boton-comprar">Comprar</button>
-    </div> 
+                <button class="boton-comprar">Comprar</button>
+                <a href="index.html">Volver a inicio</a>
+            </div>
+        </div>
 
-    <div style="text-align: center; padding: 10px;">
-        <a href="index.html">Volver a inicio</a>
-    </div>
-    </body>
+
+    </main>
+</body>
+
 </html>
-
