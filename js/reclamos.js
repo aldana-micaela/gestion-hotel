@@ -16,17 +16,18 @@ function encabezado() {
    
     const logo = document.createElement("div");
     const img_logo = document.createElement("img");
-    const lbl_logo = document.createElement("label");
+    const p_logo = document.createElement("p");
+    /*modificado*/
+    p_logo.innerHTML="<span style='color:red;'>H</span>"+"oteles <br>"+"<span style='color:red;'>A</span>"+"l <br>"+"<span style='color:red;'>T</span>"+"oque"
+    
     img_logo.src="../icons/hat.png"
-    img_logo.width=40
+    img_logo.width=64
     img_logo.alt="logotipo"
     img_logo.id="logotipo"
-    lbl_logo.innerText="Hoteles Al Toque"
-    lbl_logo.htmlFor="logotipo"
     logo.id = "logo";
     encabezado.appendChild(logo);
     logo.appendChild(img_logo);
-    logo.appendChild(lbl_logo);
+    logo.appendChild(p_logo);
 
     const menu_navegacion = document.createElement("nav");
     menu_navegacion.id = "menu_navegacion";
@@ -47,25 +48,25 @@ function crearListadoEnlaces() {
     enlaces.id = "enlaces";
     menu_listado.appendChild(enlaces);
 
-    const enlace_inicio = document.createElement("a");
+    const enlace_inicio = document.createElement("a");enlace_inicio.className="enlace"
     enlace_inicio.id="enlace_inicio"
     enlace_inicio.href = "#"
     enlace_inicio.innerText = "Inicio"
     enlaces.appendChild(enlace_inicio);
 
-    const enlace_iniciar_sesion = document.createElement("a");
+    const enlace_iniciar_sesion = document.createElement("a");enlace_iniciar_sesion.className="enlace"
     enlace_iniciar_sesion.id="enlace_iniciar_sesion"
     enlace_iniciar_sesion.href = "../html/login.html"
     enlace_iniciar_sesion.innerText = "Iniciar Sesion"
     enlaces.appendChild(enlace_iniciar_sesion);
 
-    const enlace_registrarse = document.createElement("a");
+    const enlace_registrarse = document.createElement("a");enlace_registrarse.className="enlace"
     enlace_registrarse.id="enlace_registrarse"
     enlace_registrarse.href = "../html/registro.html"
     enlace_registrarse.innerText = "Registrarse"
     enlaces.appendChild(enlace_registrarse);
 
-    const enlace_contactanos = document.createElement("a");
+    const enlace_contactanos = document.createElement("a");enlace_contactanos.className="enlace"
     enlace_contactanos.id="enlace_contactanos" 
     enlace_contactanos.href = "#"
     enlace_contactanos.innerText = "Contactenos"
@@ -283,7 +284,7 @@ function pieDePagina() {
     pie_pagina.appendChild(info)
 
 }
-
+/*modoficado -------------------------------------------------*/
 function cambiarIdioma(event){
     let idioma=event.target.value;
     console.log(idioma)
@@ -297,24 +298,24 @@ function cambiarIdioma(event){
     
         document.getElementById("info").textContent="contact: mail - copyright"
 
-        if(document.getElementById("form_reclamo").style.display == 'none')
-        {
-           
-            document.getElementById("tituloSector").textContent=" New Claim Made ✅"
-            document.getElementById("titulo").textContent="Claim Ticket"
-            document.getElementById("fecha").textContent="Date: "
-            document.getElementById("c_estado").textContent="Status: "
-            document.getElementById("estado").textContent="Received for Evaluation"
-            document.getElementById("nmb").textContent="Claim: "
-            document.getElementById("dsc").textContent="Description: "  
-            document.getElementById("btn-ticket").textContent="Generate Ticket " 
-        }
+        
         if(document.getElementById('botonReclamo').style.display == 'none'){
             document.getElementById("label_n").textContent="Name:"
             document.getElementById("nombre_reclamo").placeholder="Enter title ..."
             document.getElementById("label_d").textContent="Description:"
             document.getElementById("descripcion_reclamo").placeholder="Detail the reason for the claim ..."
             document.getElementById("confirmar").textContent="Confirm"
+            if(document.getElementById("form_reclamo").style.display == 'none'){
+           
+                document.getElementById("tituloSector").textContent=" New Claim Made ✅"
+                document.getElementById("titulo").textContent="Claim Ticket"
+                document.getElementById("fecha").textContent="Date: "
+                document.getElementById("c_estado").textContent="Status: "
+                document.getElementById("estado").textContent="Received for Evaluation"
+                document.getElementById("nmb").textContent="Claim: "
+                document.getElementById("dsc").textContent="Description: "  
+                document.getElementById("btn-ticket").textContent="Generate Ticket " 
+            }
         }else{
             document.getElementById("botonReclamo").textContent="Make New Claim"
         }
@@ -327,17 +328,7 @@ function cambiarIdioma(event){
         document.getElementById("label").textContent="Idioma: "
         document.getElementById("h2").textContent="Reclamos"
         document.getElementById("info").textContent="contacto: correo electronico - derechos de autor"
-        if(document.getElementById("form_reclamo").style.display == 'none')
-        {
-            document.getElementById("tituloSector").textContent=" Nuevo Reclamo Realizado ✅"
-            document.getElementById("titulo").textContent="Ticket de Reclamo"
-            document.getElementById("fecha").textContent="Fecha: "
-            document.getElementById("c_estado").textContent="Estado: "
-            document.getElementById("estado").textContent="Recibido para Evaluacion"
-            document.getElementById("nmb").textContent="Reclamo: "
-            document.getElementById("dsc").textContent="Descripcion: "  
-            document.getElementById("btn-ticket").textContent="Generar Ticket " 
-        }
+       
         if(document.getElementById('botonReclamo').style.display == 'none'){
     
             document.getElementById("label_n").textContent="Nombre: "
@@ -345,6 +336,18 @@ function cambiarIdioma(event){
             document.getElementById("label_d").textContent="Descripcion:"
             document.getElementById("descripcion_reclamo").placeholder="Detallar el motivo del reclamo ..."
             document.getElementById("confirmar").textContent="Confirmar"
+            
+            if(document.getElementById("form_reclamo").style.display == 'none')
+            {
+                document.getElementById("tituloSector").textContent=" Nuevo Reclamo Realizado ✅"
+                document.getElementById("titulo").textContent="Ticket de Reclamo"
+                document.getElementById("fecha").textContent="Fecha: "
+                document.getElementById("c_estado").textContent="Estado: "
+                document.getElementById("estado").textContent="Recibido para Evaluacion"
+                document.getElementById("nmb").textContent="Reclamo: "
+                document.getElementById("dsc").textContent="Descripcion: "  
+                document.getElementById("btn-ticket").textContent="Generar Ticket " 
+            }
         }else{
             document.getElementById("botonReclamo").textContent="Realizar Nuevo Reclamo"
 
