@@ -1,9 +1,11 @@
 var productosCarrito = [];
 
- function carritos() {
+document.getElementById("carrito-nav").addEventListener("click", function () {
     console.log(productosCarrito);
     sessionStorage.setItem("texto-carrito", JSON.stringify(productosCarrito));
-}
+});
+
+
 
 
 function Reserva(nombre, lugar, estrella, tipohabitacion, pension, precio, cantHuespedes, fechadesde, fechahasta) {
@@ -176,6 +178,7 @@ function mostrarReserva() {
     if (reservas.length != 0) {
         for (let reserva of reservas) {
             var li = document.createElement('li');
+            li.className = "li-lista-productos";
             var button = document.createElement('button');
             button.style.cssText = `
             height: 30px; 
@@ -208,8 +211,8 @@ function mostrarReserva() {
                         "Fecha desde: " + reserva.fechadesde + "<br>" +
                         "Fecha hasta: " + reserva.fechahasta + "<br>" +
                         "Precio: $" + reserva.precio + "<br>";
-                    agregarACarrito(button, li);
-                    li.className = "li-lista-productos";
+                    agregarACarrito(button, li.innerHTML);
+                    
                     li.appendChild(button);
                     ul.appendChild(li);
                     coincidencia = true;
@@ -232,7 +235,6 @@ function crearEncabezadoSinCoindicenciasBusqueda() {
 
 function alertaProductosCarrito(contenidoProducto) {
     var productos = JSON.parse(sessionStorage.getItem("productos-carrito"));
-
     if (productos) {
         if (!productos.includes(contenidoProducto)) {
             alert("Producto agregado a carrito");
@@ -245,7 +247,6 @@ function agregarACarrito(boton, contenidoProducto) {
     boton.addEventListener("click", () => {
         productosCarrito.push(contenidoProducto);
         console.log(productosCarrito);
-
         alertaProductosCarrito(contenidoProducto);
     });
 }
@@ -254,3 +255,53 @@ function agregarACarrito(boton, contenidoProducto) {
 function getCarrito(){
     return productosCarrito;
 }
+
+function rangoFecha() {
+    fechaActual();
+    fechaMaxima();
+}
+
+function fechaActual() {
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1;
+    var yyyy = today.getFullYear();
+
+    if (dd < 10) {
+        dd = '0' + dd;
+    }
+
+    if (mm < 10) {
+        mm = '0' + mm;
+    }
+
+    today = yyyy + '-' + mm + '-' + dd;
+
+    var fecha_desde = document.getElementById('fecha-desde');
+    var fecha_hasta = document.getElementById('fecha-hasta');
+    fecha_desde.min = today;
+    fecha_hasta.min = today;
+}
+
+function fechaMaxima() {
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1;
+    var yyyy = today.getFullYear();
+
+    if (dd < 10) {
+        dd = '0' + dd;
+    }
+
+    if (mm < 10) {
+        mm = '0' + mm;
+    }
+
+    today = (yyyy + 1) + '-' + mm + '-' + dd;
+
+    var fecha_desde = document.getElementById('fecha-desde');
+    var fecha_hasta = document.getElementById('fecha-hasta');
+    fecha_desde.max = today;
+    fecha_hasta.max = today;
+}
+
