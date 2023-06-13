@@ -1,4 +1,5 @@
 var productosCarrito = [];
+var carritoPrueba =[];
 
 document.getElementById("carrito-nav").addEventListener("click", function () {
     console.log(productosCarrito);
@@ -211,7 +212,7 @@ function mostrarReserva() {
                         "Fecha desde: " + reserva.fechadesde + "<br>" +
                         "Fecha hasta: " + reserva.fechahasta + "<br>" +
                         "Precio: $" + reserva.precio + "<br>";
-                    agregarACarrito(button, li.innerHTML);
+                    agregarACarrito(button, li.innerHTML, reserva);
                     
                     li.appendChild(button);
                     ul.appendChild(li);
@@ -233,21 +234,23 @@ function crearEncabezadoSinCoindicenciasBusqueda() {
     return h3;
 }
 
-function alertaProductosCarrito(contenidoProducto) {
+function alertaProductosCarrito(contenidoProducto, reserva) {
     var productos = JSON.parse(sessionStorage.getItem("productos-carrito"));
     
-        if (!productos.includes(contenidoProducto)) {
+    if (productos) {
+        if (!carritoPrueba.includes(reserva) ) {
+            carritoPrueba.push(reserva);
             alert("Producto agregado a carrito");
         }
-    
+    }
 
 }
 
-function agregarACarrito(boton, contenidoProducto) {
+function agregarACarrito(boton, contenidoProducto, reserva) {
     boton.addEventListener("click", () => {
         productosCarrito.push(contenidoProducto);
         console.log(productosCarrito);
-        alertaProductosCarrito(contenidoProducto);
+        alertaProductosCarrito(contenidoProducto, reserva);
     });
 }
 
