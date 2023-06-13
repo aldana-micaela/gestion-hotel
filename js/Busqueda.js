@@ -134,6 +134,7 @@ function crearDivListaProductos() {
 
     return div;
 }
+
 function filtrar(){
 var reservas=[];
 if(document.getElementById('precio')==='preciomayor'){
