@@ -7,114 +7,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Hoteles al toque</title>
 
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="../css/style-header.css">
+    <link rel="stylesheet" href="../css/busqueda.css">
     <script src="../js/Busqueda.js"></script>
 </head>
 
 <body>
     <header>
-        <div id="cabecera-autogestion">
-            <nav id="nav-autogestion">
-                
-                    <button>
-                        <a href="login.html">Iniciar sesión</a>
-                    </button>
-                    <button id="carrito-nav">
-                        <a href="carrito.html">Carrito de compras</a>
-                    </button>
-                
-            </nav>
-        </div>
-
+        <a href="./index.html"><span class="logo-container"><img src="../icons/hat.png" class="logo" alt="hat-logo">
+                <p><span class="selected-letter">H</span>oteles <span class="selected-letter">A</span>l <span
+                        class="selected-letter">T</span>oque</p>
+            </span></a>
+        <nav class="nav-container">
+            <ul class="list">
+                <a href="login.html">
+                    <li class="nav-item"><img src="" class="icon" alt="">Iniciar Sesión</li>
+                </a>
+                <a href="registro.html">
+                    <li class="nav-item"><img src="" class="icon" alt="">Registrarse</li>
+                </a>
+            </ul>
+        </nav>
     </header>
 
-    <main>
-        <div class="background-filtros" id="container-filtros">
 
+    <main id="main">
+
+        <h2 id="cabecera"> Búsqueda de hoteles </h2>
+
+        <div id="container-filtros">
 
             <div class="filtros" id="filtros">
-                <h2 id="cabecera"> Búsqueda de hoteles </h2>
 
-                <div class="filtro-hotel">
-                    <div>
-                        <select id="hoteles-estrellas">
-
-                            <option name="tipo" id="1estrella"> 1 Estrella</option>
-
-                            <option name="tipo" id="2estrellas">2 Estrellas</option>
-                            <option name="tipo" id="3estrellas"> 3 Estrellas</option>
-
-                            <option name="tipo" id="4estrellas">4 Estrellas</option>
-                            <option name="tipo" id="5estrellas"> 5 Estrellas</option>
-
-
-
-                        </select>
-                        <label >
-                            Lugar
-                            <input class="campos" type="text" id="lugar-hotel" required
-                                placeholder="Ingresa a donde queres ir">
-                        </label>
-
-                    </div>
-                    <div class="Tipo-habitacion">
-
-
-                        <select name="Tipo-habitacion" id="habitacion">
-                            <option value="estandar">Estandar</option>
-                            <option value="premium">Premium</option>
-                            <option value="presidencial">Presidencial</option>
-                        </select>
-
-
-                    </div>
-                    <div class="pension">
-                        <select name="pension" id="pension">
-                            <option value="Desayuno">Desayuno</option>
-                            <option value="Media pensión">Media pensión</option>
-                            <option value="pensión completa">Pensión completa</option>
-                        </select>
-
-                    </div>
-
-                    <div>
-                        <label>
-                            Cantidad huespedes
-                            <input class="campos" type="number" min="1" max="5" id="cantidad-huesped" required
-                                placeholder="Ingrese cantidad de huespedes">
-                        </label>
-                    </div>
-                </div>
-
-                <select name="precio" id="precio">
-                    <option name="tipo" id="preciomayor">Precio mayor</label>
-
-                    <option name="tipo" id="preciomenor">Precio menor</label>
-                </select>
-
-                <div>
-                    <label id="fecha-d"> Fecha Desde
-                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
-                            id="fecha-desde" min="" max="" onclick="rangoFecha()" required placeholder="Desde">
+                <label>
+                    Servicio:
+                    <select id="hoteles-estrellas">
+                        <option name="tipo" id="1estrella"> 1 Estrella</option>
+                        <option name="tipo" id="2estrellas">2 Estrellas</option>
+                        <option name="tipo" id="3estrellas"> 3 Estrellas</option>
+                        <option name="tipo" id="4estrellas">4 Estrellas</option>
+                        <option name="tipo" id="5estrellas"> 5 Estrellas</option>
+                    </select>
+                    <select name="Tipo-habitacion" id="habitacion">
+                        <option value="estandar">Estandar</option>
+                        <option value="premium">Premium</option>
+                        <option value="presidencial">Presidencial</option>
+                    </select>
+                    <select name="pension" id="pension">
+                        <option value="Desayuno">Desayuno</option>
+                        <option value="Media pensión">Media pensión</option>
+                        <option value="pensión completa">Pensión completa</option>
+                    </select>
+                    <select name="precio" id="precio">
+                        <option name="tipo" value="preciomayor">Precio mayor</option>
+                        <option name="tipo" value="preciomenor">Precio menor</option>
+                    </select>
                     </label>
 
-                    <div>
+                    <label>
+                        Lugar:
+                        <input class="campos" type="text" id="lugar-hotel" required
+                            placeholder="Ingresa a donde queres ir" size="60">
+                    </label>
+                    <label>
+                        Cantidad de huespedes:
+                        <input type="number" min="1" max="5" class="campos" id="cantidad-huesped" required>
+                    </label>
+
+                    <section>
+                        <label id="fecha-d"> Fecha Desde
+                            <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                                id="fecha-desde" min="" max="" onclick="rangoFecha()" required placeholder="Desde">
+                        </label>
+
                         <label id="fecha-h"> Fecha Hasta
                             <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
-                                id="fecha-hasta" min='fecha-desde' max="" onclick="rangoFecha()" required placeholder="Hasta">
+                                id="fecha-hasta" min='fecha-desde' max="" onclick="rangoFecha()" required
+                                placeholder="Hasta">
                         </label>
-                    </div>
+                    </section>
+
+                    <input class="btn-buscar" type="submit" value=" Buscar" onclick="mostrarReserva()"></input>
+                    <button id="carrito-nav" onclick="mostrarCarrito()"> <a href="carrito.html">carrito de compras</a></button>
+          
+          
                 </div>
 
 
 
-
-                <input class="btn-buscar" type="submit" value=" Buscar" onclick="mostrarReserva()"></input>
-            </div>
-
-
+        </div>
 
     </main>
-
 
     <footer>
 
