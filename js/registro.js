@@ -122,13 +122,13 @@ function isValidPaymentData() {
     }
 
     if (payment === 'mp') {
-        const valid_cvu = /^[0-9]{22}$/.test(payment.cvu);
-        const valid_alias = /^(?:[a-zA-z0-9]+\.*[a-zA-z0-9]+){6,20}$/.test(payment.alias); //alfanumérico con punto entre 6 y 22 caracteres
+        const valid_cvu = /^[0-9]{22}$/.test(payment_data.cvu);
+        const valid_alias = /^[^,.](?:[a-zA-Z0-9]+[\.]?){6,20}[^\,.]$/.test(payment_data.alias); //alfanumérico con punto entre 6 y 22 caracteres
         return valid_cvu && valid_alias;
     }
 
     if (payment === 'transfer') {
-        return /^[0-9]{22}$/.test(payment.cbu);
+        return /^[0-9]{22}$/.test(payment_data.cbu);
     }
 
     return true;
