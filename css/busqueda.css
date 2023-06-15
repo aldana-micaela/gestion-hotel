@@ -1,5 +1,5 @@
 * {
-    margin: 0; 
+    margin: 0;
     padding: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     box-sizing: border-box;
@@ -25,23 +25,42 @@ input:focus {
 
 main {
     text-align: center;
-    margin:20px;
+    margin: 20px;
 }
 
-.filtros{
+.filtros {
     text-align: start;
     border: 2px solid black;
     display: inline-block;
     margin: 30px;
     padding: 20px;
-    
+
 }
 
 label {
     display: block;
-    margin:10px;
+    margin: 10px;
+}
+.botones{
+    position: relative;
+    left: 28%;
+
 }
 
-.btn-buscar{
-margin : 10px 250px;
+.btn-buscar, .btn-carrito {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 0.5em;
+    box-shadow: #4d4d4d 3px 3px;
+}
+
+.btn-buscar:hover{
+    background-color: #F2BED1;
+    
+}
+
+
+.btn-carrito:hover{
+    background-color: #F2BED1;
+    
 }
