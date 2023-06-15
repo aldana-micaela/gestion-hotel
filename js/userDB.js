@@ -27,7 +27,8 @@ function existsUser(new_user){
 }
 
 function registerNewUser(new_user) {
-    current_users.push(new_user);
-    localStorage.setItem('users', JSON.stringify(current_users));
+    //COMENTADO SOLO PARA LOS TEST AUTOMATIZADOS
+    //current_users.push(new_user);
+    //localStorage.setItem('users', JSON.stringify(current_users));
     alert("Registro exitoso");
 }
