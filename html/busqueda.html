@@ -39,7 +39,7 @@
         <div id="container-filtros">
 
             <div class="filtros" id="filtros">
-
+                <form id="busqueda">
                 <label>
                     Servicio:
                     <select id="hoteles-estrellas">
@@ -64,7 +64,7 @@
                         <option name="tipo" value="preciomenor">Precio menor</option>
                     </select>
                 </label>
-
+              
                 <label>
                     Lugar:
                     <input class="campos" type="text" id="lugar-hotel" required placeholder="Ingresa a donde queres ir"
@@ -86,13 +86,14 @@
                             id="fecha-hasta" min='fecha-desde' max="" onclick="rangoFecha()" required
                             placeholder="Hasta">
                     </label>
+               
                 </section>
 
                 <div class="botones">
                     <input class="btn-buscar" type="submit" value="Buscar" onclick="mostrarReserva()"></input>
                     <button class="btn-carrito" onclick="mostrarCarrito()"> <a href="carrito.html">carrito de compras</a> </button>
                 </div>
-
+            </form>
 
             </div>
 
@@ -123,10 +124,6 @@
                     <a href="" class="Twitter">t</a>
                     <a href="" class="Instagram">i</a>
                 </div>
-            </div>
-
-            <div>
-                <button class="btn-reclamo"><a href="reclamos.html">reclamos</a></button>
             </div>
         </div>
     </footer>
