@@ -9,6 +9,7 @@
     <title>Carrito de compras</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/style-header.css">
+    <link rel="stylesheet" href="../css/style-footer.css">
     <link rel="stylesheet" href="../css/carrito.css">
 
 
@@ -21,7 +22,11 @@
                         class="selected-letter">T</span>oque</p>
             </span></a>
         <nav class="nav-container">
-
+            <ul class="list">
+                <a href="busqueda.html">
+                    <li class="nav-item"><img src="" class="icon" alt="">Hoteles</li>
+                </a>
+            </ul>
         </nav>
     </header>
 
@@ -102,13 +107,42 @@
                     }
                 </script>
 
-                <button class="boton-comprar">Comprar</button>
+                <div class="botones">
+                    <button class="btn-comprar"> <a href="pago.html">Comprar carrito</a></button>
+                    <button class="btn-volver"> <a href="index.html">Volver a inicio</a> </button>
+                </div>
+
             </div>
-            <a href="index.html">Volver a inicio</a>
         </div>
 
 
     </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="box">
+                <figure>
+                    <a href=""><h2><span>H</span>oteles <span>A</span>l <span>T</span>oque</h2></a>
+                    <small>&copy;2023 -Todos los derechos reservados.</small>
+                </figure> 
+            </div>
+            <div class="box">
+                <h2>Contactenos!</h2>
+                <p>Email: hat@gmail.com</p>
+            </div>
+            <div class="box">
+                <h2 class="follow">Siguenos</h2>
+                <div class="redes">
+                    <a href="" class="facebook">f</a>
+                    <a href=""class="Twitter">t</a>
+                    <a href=""class="Instagram">i</a>
+                </div>
+            </div>
+            <div>
+                <button class="btn-reclamo"><a href="reclamos.html">reclamos</a></button>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

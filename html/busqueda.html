@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Hoteles al toque</title>
 
-    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="../css/style-footer.css">
     <link rel="stylesheet" href="../css/style-header.css">
     <link rel="stylesheet" href="../css/busqueda.css">
-    <script src="../js/Busqueda.js"></script>
+
 </head>
 
 <body>
@@ -39,7 +39,7 @@
         <div id="container-filtros">
 
             <div class="filtros" id="filtros">
-
+                <form id="busqueda">
                 <label>
                     Servicio:
                     <select id="hoteles-estrellas">
@@ -63,36 +63,39 @@
                         <option name="tipo" value="preciomayor">Precio mayor</option>
                         <option name="tipo" value="preciomenor">Precio menor</option>
                     </select>
+                </label>
+              
+                <label>
+                    Lugar:
+                    <input class="campos" type="text" id="lugar-hotel" required placeholder="Ingresa a donde queres ir"
+                        size="60">
+                </label>
+                <label>
+                    Cantidad de huespedes:
+                    <input type="number" min="1" max="5" class="campos" id="cantidad-huesped" required>
+                </label>
+
+                <section>
+                    <label id="fecha-d"> Fecha Desde
+                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                            id="fecha-desde" min="" max="" onclick="rangoFecha()" required placeholder="Desde">
                     </label>
 
-                    <label>
-                        Lugar:
-                        <input class="campos" type="text" id="lugar-hotel" required
-                            placeholder="Ingresa a donde queres ir" size="60">
+                    <label id="fecha-h"> Fecha Hasta
+                        <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                            id="fecha-hasta" min='fecha-desde' max="" onclick="rangoFecha()" required
+                            placeholder="Hasta">
                     </label>
-                    <label>
-                        Cantidad de huespedes:
-                        <input type="number" min="1" max="5" class="campos" id="cantidad-huesped" required>
-                    </label>
+               
+                </section>
 
-                    <section>
-                        <label id="fecha-d"> Fecha Desde
-                            <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
-                                id="fecha-desde" min="" max="" onclick="rangoFecha()" required placeholder="Desde">
-                        </label>
-
-                        <label id="fecha-h"> Fecha Hasta
-                            <input class="campos" type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
-                                id="fecha-hasta" min='fecha-desde' max="" onclick="rangoFecha()" required
-                                placeholder="Hasta">
-                        </label>
-                    </section>
-
-                    <input class="btn-buscar" type="submit" value=" Buscar" onclick="mostrarReserva()"></input>
-                    <button id="carrito-nav" onclick="mostrarCarrito()"> <a href="carrito.html">carrito de compras</a></button>
-          
-          
+                <div class="botones">
+                    <input class="btn-buscar" type="submit" value="Buscar" onclick="mostrarReserva()"></input>
+                    <button class="btn-carrito" onclick="mostrarCarrito()"> <a href="carrito.html">carrito de compras</a> </button>
                 </div>
+            </form>
+
+            </div>
 
 
 
@@ -101,7 +104,28 @@
     </main>
 
     <footer>
-
+        <div class="footer-container">
+            <div class="box">
+                <figure>
+                    <a href="">
+                        <h2><span>H</span>oteles <span>A</span>l <span>T</span>oque</h2>
+                    </a>
+                    <small>&copy;2023 -Todos los derechos reservados.</small>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Contactenos!</h2>
+                <p>Email: hat@gmail.com</p>
+            </div>
+            <div class="box">
+                <h2 class="follow">Siguenos</h2>
+                <div class="redes">
+                    <a href="" class="facebook">f</a>
+                    <a href="" class="Twitter">t</a>
+                    <a href="" class="Instagram">i</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="../js/Busqueda.js"></script>
