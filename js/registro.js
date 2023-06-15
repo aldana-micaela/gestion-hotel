@@ -106,7 +106,7 @@ function checkValidityMessage(input){
     }
 
     if (!isValid) {
-        alert(errorMessage);
+        alert(errorMessage.join());
     }
 
     return isValid;
