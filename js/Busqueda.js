@@ -122,7 +122,7 @@ function crearDivListaProductos() {
     div.id = "lista";
     div.style.cssText =
         `
-        color: #ffffff;
+        color: black;
         width: 100%;
         max-width: 800px;
         margin: 20px auto;
@@ -133,7 +133,7 @@ function crearDivListaProductos() {
         border-radius: 10px;    
         padding: 30px 20px;
         box-shadow: 10px 5px 5px 5px rgba(0, 0, 0, 0.221);
-        background-color: #494cf8;
+        background-color: #F8E8EE;;
     `;
 
      return div;
@@ -192,7 +192,7 @@ function mostrarReserva() {
             padding-right: 5px;  
             margin: 20px auto; 
             text-transform: uppercase;
-            background-color:#151750;
+            background-color:#F2BED1;
             border-style: solid; 
             border-radius: 10px;  
             width: 150px;   
