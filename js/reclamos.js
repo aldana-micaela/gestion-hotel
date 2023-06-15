@@ -50,7 +50,7 @@ function crearListadoEnlaces() {
 
     const enlace_inicio = document.createElement("a");enlace_inicio.className="enlace"
     enlace_inicio.id="enlace_inicio"
-    enlace_inicio.href = "#"
+    enlace_inicio.href = "../html/index.html"
     enlace_inicio.innerText = "Inicio"
     enlaces.appendChild(enlace_inicio);
 
@@ -66,11 +66,7 @@ function crearListadoEnlaces() {
     enlace_registrarse.innerText = "Registrarse"
     enlaces.appendChild(enlace_registrarse);
 
-    const enlace_contactanos = document.createElement("a");enlace_contactanos.className="enlace"
-    enlace_contactanos.id="enlace_contactanos" 
-    enlace_contactanos.href = "#"
-    enlace_contactanos.innerText = "Contactenos"
-    enlaces.appendChild(enlace_contactanos);
+   
 }
 
 function crearSelectorIdioma() {
@@ -277,12 +273,59 @@ function pieDePagina() {
     pie_pagina.id = "pie_pagina"
     document.body.appendChild(pie_pagina)
 
-    const info = document.createElement("a")
-    info.id="info"
-    info.href="#"
-    info.innerText="contacto: correo electronico - derechos de autor"
-    pie_pagina.appendChild(info)
+    const div1 = document.createElement("div")
+    div1.id = "div1"
+    pie_pagina.appendChild(div1)
 
+    const nmbr_pagina = document.createElement("h2")
+    nmbr_pagina.id="nmbr_pagina"
+    nmbr_pagina.innerHTML="<span style='color:red;'>H</span>"+"oteles "+"<span style='color:red;'>A</span>"+"l "+"<span style='color:red;'>T</span>"+"oque"
+    div1.appendChild(nmbr_pagina)
+    const derechos = document.createElement("small")
+    derechos.id="small"
+    derechos.innerText="©2023 -Todos los derechos reservados."
+    div1.appendChild(derechos)
+   
+    const div2 = document.createElement("div")
+    div2.id = "div2"
+    pie_pagina.appendChild(div2)
+    const contactenos = document.createElement("h2")
+    contactenos.id="contactenos"
+    contactenos.innerText="Contactenos!"
+    div2.appendChild(contactenos)
+    const email = document.createElement("small")
+    email.id="email"
+    email.innerText="Email: hat@gmail.com"
+    div2.appendChild(email)
+
+    const siguenos = document.createElement("h2")
+    siguenos.innerText="Siguenos"
+    siguenos.id="siguenos"
+    const div3 = document.createElement("div")
+    div3.id = "div3"
+
+    
+    const f = document.createElement("a")
+    f.className="redSocial"
+    f.innerText="f"
+   
+    const t = document.createElement("a")
+    t.className="redSocial"
+    t.innerText="t"
+
+    const i = document.createElement("a")
+    i.className="redSocial"
+    i.innerText="i"
+
+    pie_pagina.appendChild(div3)
+    div3.appendChild(siguenos)
+    div3.appendChild(f)
+    div3.appendChild(t)
+    div3.appendChild(i)
+
+
+
+        
 }
 /*modoficado -------------------------------------------------*/
 function cambiarIdioma(event){
@@ -296,7 +339,6 @@ function cambiarIdioma(event){
         document.getElementById("label").textContent="Language: "
         document.getElementById("h2").textContent="Claims"
     
-        document.getElementById("info").textContent="contact: mail - copyright"
 
         
         if(document.getElementById('botonReclamo').style.display == 'none'){
@@ -327,7 +369,7 @@ function cambiarIdioma(event){
         document.getElementById("enlace_contactanos").textContent="Contactenos"
         document.getElementById("label").textContent="Idioma: "
         document.getElementById("h2").textContent="Reclamos"
-        document.getElementById("info").textContent="contacto: correo electronico - derechos de autor"
+
        
         if(document.getElementById('botonReclamo').style.display == 'none'){
     
