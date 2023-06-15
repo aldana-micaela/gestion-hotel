@@ -14,11 +14,11 @@ console.log(current_users);
 function existsUser(new_user){
     for(let i = 0; i < current_users.length; i++) {
         if(current_users[i].dni === new_user.dni) {
-            alert("Existe usuario registrado con ese DNI");
+            showAlert("Existe usuario registrado con ese DNI");
             return true;
         }
         if(current_users[i].email === new_user.email) {
-            alert("Existe usuario registrado con ese email");
+            showAlert("Existe usuario registrado con ese email");
             return true;
         }
     }
@@ -30,5 +30,5 @@ function registerNewUser(new_user) {
     //COMENTADO SOLO PARA LOS TEST AUTOMATIZADOS
     //current_users.push(new_user);
     //localStorage.setItem('users', JSON.stringify(current_users));
-    alert("Registro exitoso");
+    showAlert("Registro exitoso");
 }
