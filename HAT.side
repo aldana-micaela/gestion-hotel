@@ -4040,6 +4040,391 @@
       ],
       "value": "No hay coincidencias con los filtros de su búsqueda"
     }]
+  }, {
+    "id": "a8831dda-e23c-40df-9fe9-c29fa6c37753",
+    "name": "gestion de reservas - pago de carrito",
+    "commands": [{
+      "id": "3085baae-a9c2-4332-aa01-c827a8a672e6",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/html/pago.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "048d4e14-8bfe-4060-9cde-2c051957e4f4",
+      "comment": "",
+      "command": "assertSelectedValue",
+      "target": "id=medioPago",
+      "targets": [
+        ["id=medioPago", "id"],
+        ["css=#medioPago", "css:finder"],
+        ["xpath=//select[@id='medioPago']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "mismo"
+    }, {
+      "id": "03206633-919d-4b0d-8977-2feec0428b24",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "75d0a741-525b-49a6-9d70-e0409535892a",
+    "name": "gestion de reserva -  pago carrito con efectivo",
+    "commands": [{
+      "id": "35a48d03-5784-4465-8ad7-964c61a055db",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/html/pago.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ab65bf7-c7b4-478f-befc-a706e65158e3",
+      "comment": "",
+      "command": "assertNotSelectedValue",
+      "target": "id=medioPago",
+      "targets": [
+        ["id=medioPago", "id"],
+        ["css=#medioPago", "css:finder"],
+        ["xpath=//select[@id='medioPago']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "efectivo"
+    }, {
+      "id": "cb08c8f8-1443-4ab8-a886-dc6c0216a2a8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmar compra')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "f9d0dedc-61a6-457f-a13d-bd17e79b67c9",
+    "name": "gestion de reserva - pago carrito con mercado pago",
+    "commands": [{
+      "id": "d32f24ca-01bf-46b6-ac45-06bff20fe61d",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/html/pago.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8e287256-be01-4206-8134-b12e2fdbb8a9",
+      "comment": "",
+      "command": "assertNotSelectedValue",
+      "target": "id=medioPago",
+      "targets": [
+        ["id=medioPago", "id"],
+        ["css=#medioPago", "css:finder"],
+        ["xpath=//select[@id='medioPago']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "mercadopago"
+    }, {
+      "id": "5d40967f-e51b-4548-af1b-edb3e8b1baab",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmar compra')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9627f540-ba12-40e3-85dd-4015978ae574",
+    "name": "pago carrito con transferencia",
+    "commands": [{
+      "id": "7cd9d120-0dbc-4897-b107-99cd4fec6307",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/html/pago.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c2dc7fc-6702-4f56-955a-a9ee9f5fb991",
+      "comment": "",
+      "command": "assertNotSelectedValue",
+      "target": "id=medioPago",
+      "targets": [
+        ["id=medioPago", "id"],
+        ["css=#medioPago", "css:finder"],
+        ["xpath=//select[@id='medioPago']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "transferencia"
+    }, {
+      "id": "86f202d7-ba1a-4158-928d-b8d8369044d9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmar compra')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "ea40e59f-e263-4381-919a-f8cd7033715a",
+    "name": "Gestion de reserva- pago con debito espacios en blanco",
+    "commands": [{
+      "id": "23da3ed4-14d4-4cf2-b5be-6957814f0d25",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/html/pago.html?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "29bd4b34-761e-40ec-b113-72b676b92d2a",
+      "comment": "",
+      "command": "click",
+      "target": "css=option:nth-child(3)",
+      "targets": [
+        ["id=medioPago", "id"],
+        ["css=#medioPago", "css:finder"],
+        ["xpath=//select[@id='medioPago']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa9b1c74-1f5a-4b66-a347-661d9fcfe344",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a5692c90-b8f6-4bc3-8b29-976c2f6c6283",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=input:required",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "cdcb0fa8-8d72-451c-8e34-d2741e59cf3b",
+    "name": "Gestion de reserva- pago con credito espacios en blanco",
+    "commands": [{
+      "id": "34f7f80a-1031-4ed4-9784-7e17647b34a6",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/html/pago.html?",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "73f7a3e1-b01a-4fe8-bf65-e43c9a73bc3a",
+      "comment": "",
+      "command": "click",
+      "target": "css=option:nth-child(4)",
+      "targets": [
+        ["id=medioPago", "id"],
+        ["css=#medioPago", "css:finder"],
+        ["xpath=//select[@id='medioPago']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b9c9c69b-019e-4d4a-9ea6-761684bdbb65",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmar compra')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2e4fe9f-d781-431c-82b2-79e8e098e645",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=input:required",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d6f5ece9-9d60-4e91-a067-f981d645b4cd",
+    "name": "gestion de reserva - pago con debito exitoso",
+    "commands": [{
+      "id": "9ad944a4-5015-4cd3-9bba-59168761706b",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/html/pago.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96ed21aa-6eb6-47af-93f4-e5e0183ce858",
+      "comment": "",
+      "command": "click",
+      "target": "css=option:nth-child(3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "603346f3-3ddf-4a4c-95e2-a25b4c57ad41",
+      "comment": "",
+      "command": "type",
+      "target": "id=banco",
+      "targets": [
+        ["id=banco", "id"],
+        ["css=#banco", "css:finder"],
+        ["xpath=//input[@id='banco']", "xpath:attributes"],
+        ["xpath=//div[@id='datos']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "banco nacion"
+    }, {
+      "id": "de859e86-520c-4440-a2ba-589e25324334",
+      "comment": "",
+      "command": "type",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div[@id='datos']/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "carlos luis humberto"
+    }, {
+      "id": "9ba87211-3119-48a9-9472-a596a1769a7d",
+      "comment": "",
+      "command": "type",
+      "target": "id=cbu",
+      "targets": [
+        ["id=cbu", "id"],
+        ["css=#cbu", "css:finder"],
+        ["xpath=//input[@id='cbu']", "xpath:attributes"],
+        ["xpath=//div[@id='datos']/div/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "0008569878546325"
+    }, {
+      "id": "366f1a17-6242-41d1-b667-9406741a80ca",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha",
+      "targets": [
+        ["id=fecha", "id"],
+        ["css=#fecha", "css:finder"],
+        ["xpath=//input[@id='fecha']", "xpath:attributes"],
+        ["xpath=//div[@id='datos']/div/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "09/29"
+    }, {
+      "id": "c4318e66-768c-47de-accf-5cd732b29aa7",
+      "comment": "",
+      "command": "type",
+      "target": "id=codigo",
+      "targets": [
+        ["id=codigo", "id"],
+        ["css=#codigo", "css:finder"],
+        ["xpath=//input[@id='codigo']", "xpath:attributes"],
+        ["xpath=//div[@id='datos']/div/input[5]", "xpath:idRelative"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": "096"
+    }, {
+      "id": "01db7033-12a8-4752-a171-26f394c37c9c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmar compra')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "ed320c3c-5189-40a2-9415-df97fe84f1f1",
+    "name": "gestion de reserva - pago credito sin un campo completo",
+    "commands": [{
+      "id": "bc26f21f-b7b2-408f-99ff-59258a9cbe0d",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/html/pago.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "09e54501-5c9c-4fb8-9c7b-e5b620463640",
+      "comment": "",
+      "command": "click",
+      "target": "css=option:nth-child(4)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a93442b8-0568-4f71-808b-c79f33051f48",
+      "comment": "",
+      "command": "type",
+      "target": "id=banco",
+      "targets": [
+        ["id=banco", "id"],
+        ["css=#banco", "css:finder"],
+        ["xpath=//input[@id='banco']", "xpath:attributes"],
+        ["xpath=//div[@id='datos']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Galicia"
+    }, {
+      "id": "16f0a91f-9cc5-4917-94b5-a452ffdf09be",
+      "comment": "",
+      "command": "type",
+      "target": "id=nombre",
+      "targets": [
+        ["id=nombre", "id"],
+        ["css=#nombre", "css:finder"],
+        ["xpath=//input[@id='nombre']", "xpath:attributes"],
+        ["xpath=//div[@id='datos']/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Carlos"
+    }, {
+      "id": "85e86007-ce6b-467e-995c-0f57a5a782a9",
+      "comment": "",
+      "command": "type",
+      "target": "id=cbu",
+      "targets": [
+        ["id=cbu", "id"],
+        ["css=#cbu", "css:finder"],
+        ["xpath=//input[@id='cbu']", "xpath:attributes"],
+        ["xpath=//div[@id='datos']/div/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "0008569878546325"
+    }, {
+      "id": "ce6545ba-baf1-4b23-bdcc-ca4b6a145fa9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmar compra')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "51e06174-97de-434f-9e69-74594383d014",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=input:required",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "94f6791f-f27c-474e-9b01-fd0e7156c853",
