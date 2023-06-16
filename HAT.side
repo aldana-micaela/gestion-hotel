@@ -14,13 +14,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "c0340e13-f2af-46a3-bfa0-25164cf3ca75",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1024x768",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "3e7ae752-0b54-481e-b11f-3e020a78ae18",
       "comment": "",
       "command": "click",
@@ -305,10 +298,10 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "0e1417fd-20cf-4ffd-a3cd-e5cb4c8b04cd",
+      "id": "19ec4e98-816e-43d4-8513-aac703ae99ce",
       "comment": "",
       "command": "setWindowSize",
-      "target": "1024x768",
+      "target": "945x692",
       "targets": [],
       "value": ""
     }, {
@@ -710,7 +703,7 @@
       "id": "40ee69a2-a8bd-4644-b901-3487acc5e5de",
       "comment": "",
       "command": "setWindowSize",
-      "target": "1024x768",
+      "target": "945x692",
       "targets": [],
       "value": ""
     }, {
@@ -1109,10 +1102,10 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "83e7b1a0-9a71-4d9f-8670-d0fe5fcee7f4",
+      "id": "74a34113-565a-4f43-a180-9d15a005224f",
       "comment": "",
       "command": "setWindowSize",
-      "target": "1024x768",
+      "target": "945x692",
       "targets": [],
       "value": ""
     }, {
@@ -1440,10 +1433,10 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "38324fef-1465-42c7-8425-e3bfba5b7dcd",
+      "id": "1547a85c-031b-4b03-b180-cbc4a5fc0c15",
       "comment": "",
       "command": "setWindowSize",
-      "target": "1024x768",
+      "target": "945x692",
       "targets": [],
       "value": ""
     }, {
@@ -1758,13 +1751,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "9d726c57-2bd2-4cfd-a290-1f5fbcd37bc5",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1024x768",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "7a89e3b5-380a-4495-ab40-e36e26704586",
       "comment": "",
       "command": "click",
@@ -2014,10 +2000,10 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "4509ec25-0976-4f11-aec5-8a6f6b28311a",
+      "id": "4e6c2618-1bd7-498c-a366-0eaf3df6cbe3",
       "comment": "",
       "command": "setWindowSize",
-      "target": "1024x768",
+      "target": "800x900",
       "targets": [],
       "value": ""
     }, {
@@ -2292,13 +2278,6 @@
       "comment": "",
       "command": "open",
       "target": "/html/registro.html",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "a6c882aa-1c2b-4809-9174-f08caaa271be",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1024x768",
       "targets": [],
       "value": ""
     }, {
@@ -2586,13 +2565,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "5826d61e-6030-4041-98fd-7539292c1402",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1024x768",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "5d6450b2-1670-4dea-bd85-306837c46731",
       "comment": "",
       "command": "click",
@@ -2865,6 +2837,1007 @@
       "target": "id=msg",
       "targets": [],
       "value": "Existe usuario registrado con ese DNI"
+    }]
+  }, {
+    "id": "12432738-1537-4a2d-b368-31f5eec238ff",
+    "name": "Búsqueda exitosa",
+    "commands": [{
+      "id": "5171ba0d-597e-4309-8787-523f4d5730a7",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/html/busqueda.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "50be87f7-78d7-4234-a6cf-933cc9d0ec1b",
+      "comment": "",
+      "command": "assertSelectedValue",
+      "target": "id=hoteles-estrellas",
+      "targets": [
+        ["id=hoteles-estrellas", "id"],
+        ["css=#hoteles-estrellas", "css:finder"],
+        ["xpath=//select[@id='hoteles-estrellas']", "xpath:attributes"],
+        ["xpath=//form[@id='busqueda']/label/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "1 Estrella"
+    }, {
+      "id": "a3f0c050-265b-4536-b037-b377ecc9fe0e",
+      "comment": "",
+      "command": "assertSelectedValue",
+      "target": "id=habitacion",
+      "targets": [
+        ["id=habitacion", "id"],
+        ["name=Tipo-habitacion", "name"],
+        ["css=#habitacion", "css:finder"],
+        ["xpath=//select[@id='habitacion']", "xpath:attributes"],
+        ["xpath=//form[@id='busqueda']/label/select[2]", "xpath:idRelative"],
+        ["xpath=//select[2]", "xpath:position"]
+      ],
+      "value": "estandar"
+    }, {
+      "id": "e2f5e42c-aaa4-4998-95d6-3e34d86fd81f",
+      "comment": "",
+      "command": "assertSelectedValue",
+      "target": "id=pension",
+      "targets": [
+        ["id=pension", "id"],
+        ["name=pension", "name"],
+        ["css=#pension", "css:finder"],
+        ["xpath=//select[@id='pension']", "xpath:attributes"],
+        ["xpath=//form[@id='busqueda']/label/select[3]", "xpath:idRelative"],
+        ["xpath=//select[3]", "xpath:position"]
+      ],
+      "value": "Desayuno"
+    }, {
+      "id": "779f8378-05e1-4ef8-b4b4-e79be00ac30b",
+      "comment": "",
+      "command": "assertSelectedValue",
+      "target": "id=precio",
+      "targets": [
+        ["id=precio", "id"],
+        ["name=precio", "name"],
+        ["css=#precio", "css:finder"],
+        ["xpath=//select[@id='precio']", "xpath:attributes"],
+        ["xpath=//form[@id='busqueda']/label/select[4]", "xpath:idRelative"],
+        ["xpath=//select[4]", "xpath:position"]
+      ],
+      "value": "preciomayor"
+    }, {
+      "id": "d9c2df86-8554-4246-aa37-a3e106ac28a5",
+      "comment": "",
+      "command": "type",
+      "target": "id=lugar-hotel",
+      "targets": [
+        ["id=lugar-hotel", "id"],
+        ["css=#lugar-hotel", "css:finder"],
+        ["xpath=//input[@id='lugar-hotel']", "xpath:attributes"],
+        ["xpath=//form[@id='busqueda']/label[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "cordoba"
+    }, {
+      "id": "975abaf9-b101-4d0c-a30c-1203cbc9f3c7",
+      "comment": "",
+      "command": "type",
+      "target": "id=cantidad-huesped",
+      "targets": [
+        ["id=cantidad-huesped", "id"],
+        ["css=#cantidad-huesped", "css:finder"],
+        ["xpath=//input[@id='cantidad-huesped']", "xpath:attributes"],
+        ["xpath=//form[@id='busqueda']/label[3]/input", "xpath:idRelative"],
+        ["xpath=//label[3]/input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "15420268-cf32-43cd-a8b1-412cfa9a4aa2",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-desde",
+      "targets": [
+        ["id=fecha-desde", "id"],
+        ["css=#fecha-desde", "css:finder"],
+        ["xpath=//input[@id='fecha-desde']", "xpath:attributes"],
+        ["xpath=//label[@id='fecha-d']/input", "xpath:idRelative"],
+        ["xpath=//section/label/input", "xpath:position"]
+      ],
+      "value": "2023-06-16"
+    }, {
+      "id": "7cb923ae-7cc3-45fc-aca6-3efddcddcb61",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-hasta",
+      "targets": [
+        ["id=fecha-hasta", "id"],
+        ["css=#fecha-hasta", "css:finder"],
+        ["xpath=//input[@id='fecha-hasta']", "xpath:attributes"],
+        ["xpath=//label[@id='fecha-h']/input", "xpath:idRelative"],
+        ["xpath=//section/label[2]/input", "xpath:position"]
+      ],
+      "value": "2023-06-20"
+    }, {
+      "id": "3b158e1b-fdfe-43b5-8a31-71018f4eb2ed",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-buscar",
+      "targets": [
+        ["css=.btn-buscar", "css:finder"],
+        ["xpath=//input[@value='Buscar']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a1a1a6f-a722-4994-b06a-5968491310e1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.li-lista-productos:nth-child(1) > button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6aef3a59-dcd3-4316-8bc1-04818bfee433",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=carrito de compras",
+      "targets": [
+        ["linkText=carrito de compras", "linkText"],
+        ["css=.btn-carrito > a", "css:finder"],
+        ["xpath=//a[contains(text(),'carrito de compras')]", "xpath:link"],
+        ["xpath=//div[@id='filtros']/div/button/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'carrito.html')]", "xpath:href"],
+        ["xpath=//button/a", "xpath:position"],
+        ["xpath=//a[contains(.,'carrito de compras')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f39c395b-8749-4912-80a1-7c7d0731ec4e",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=button:nth-child(5)",
+      "targets": [
+        ["css=button:nth-child(5)", "css:finder"],
+        ["xpath=//ul[@id='lista-productos']/li/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": "BORRAR PRODUCTO"
+    }]
+  }, {
+    "id": "a43c6ebd-6ed2-42fe-945e-ae7b76eef3ff",
+    "name": "Búsqueda no encontrada",
+    "commands": [{
+      "id": "4f3fed0e-d440-4422-b792-06f233178ce7",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/html/busqueda.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d027411c-7fa2-40b0-9c28-7026eb9ca5dc",
+      "comment": "",
+      "command": "assertSelectedValue",
+      "target": "id=hoteles-estrellas",
+      "targets": [
+        ["id=hoteles-estrellas", "id"],
+        ["css=#hoteles-estrellas", "css:finder"],
+        ["xpath=//select[@id='hoteles-estrellas']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/label/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "1 Estrella"
+    }, {
+      "id": "66f1e5c9-de50-4afa-ab8b-ca00044aee41",
+      "comment": "",
+      "command": "assertSelectedValue",
+      "target": "id=habitacion",
+      "targets": [
+        ["id=habitacion", "id"],
+        ["name=Tipo-habitacion", "name"],
+        ["css=#habitacion", "css:finder"],
+        ["xpath=//select[@id='habitacion']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/label/select[2]", "xpath:idRelative"],
+        ["xpath=//select[2]", "xpath:position"]
+      ],
+      "value": "estandar"
+    }, {
+      "id": "f08cf29d-f575-463e-a45c-11746e4cacff",
+      "comment": "",
+      "command": "assertSelectedValue",
+      "target": "id=pension",
+      "targets": [
+        ["id=pension", "id"],
+        ["name=pension", "name"],
+        ["css=#pension", "css:finder"],
+        ["xpath=//select[@id='pension']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/label/select[3]", "xpath:idRelative"],
+        ["xpath=//select[3]", "xpath:position"]
+      ],
+      "value": "Desayuno"
+    }, {
+      "id": "d26caa88-620e-4183-80be-bf2ac1ecbfdf",
+      "comment": "",
+      "command": "assertSelectedValue",
+      "target": "id=precio",
+      "targets": [
+        ["id=precio", "id"],
+        ["name=precio", "name"],
+        ["css=#precio", "css:finder"],
+        ["xpath=//select[@id='precio']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/label/select[4]", "xpath:idRelative"],
+        ["xpath=//select[4]", "xpath:position"]
+      ],
+      "value": "preciomayor"
+    }, {
+      "id": "b8e17e03-1b9a-49f8-86fa-c5e58fb9cddd",
+      "comment": "",
+      "command": "type",
+      "target": "id=lugar-hotel",
+      "targets": [
+        ["id=lugar-hotel", "id"],
+        ["css=#lugar-hotel", "css:finder"],
+        ["xpath=//input[@id='lugar-hotel']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/label[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Bariloche"
+    }, {
+      "id": "55807b93-6bde-449d-9576-2c10972e772c",
+      "comment": "",
+      "command": "type",
+      "target": "id=cantidad-huesped",
+      "targets": [
+        ["id=cantidad-huesped", "id"],
+        ["css=#cantidad-huesped", "css:finder"],
+        ["xpath=//input[@id='cantidad-huesped']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/label[3]/input", "xpath:idRelative"],
+        ["xpath=//label[3]/input", "xpath:position"]
+      ],
+      "value": "4"
+    }, {
+      "id": "11afe105-0490-4884-a438-02d60b4b3855",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-desde",
+      "targets": [
+        ["id=fecha-desde", "id"],
+        ["css=#fecha-desde", "css:finder"],
+        ["xpath=//input[@id='fecha-desde']", "xpath:attributes"],
+        ["xpath=//label[@id='fecha-d']/input", "xpath:idRelative"],
+        ["xpath=//section/label/input", "xpath:position"]
+      ],
+      "value": "2023-06-16"
+    }, {
+      "id": "c3c1d6a1-2e81-4350-b6e8-366af923b95b",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-hasta",
+      "targets": [
+        ["id=fecha-hasta", "id"],
+        ["css=#fecha-hasta", "css:finder"],
+        ["xpath=//input[@id='fecha-hasta']", "xpath:attributes"],
+        ["xpath=//label[@id='fecha-h']/input", "xpath:idRelative"],
+        ["xpath=//section/label[2]/input", "xpath:position"]
+      ],
+      "value": "2023-06-20"
+    }, {
+      "id": "e3e4c8df-10a8-4613-8f0b-abf1bf9c11ce",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-buscar",
+      "targets": [
+        ["css=.btn-buscar", "css:finder"],
+        ["xpath=//input[@value='Buscar']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c311b7ec-e83d-4dce-881a-1a86048fe70e",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css:finder"],
+        ["xpath=//div[@id='lista']/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'No hay coincidencias con los filtros de su búsqueda')]", "xpath:innerText"]
+      ],
+      "value": "No hay coincidencias con los filtros de su búsqueda"
+    }]
+  }, {
+    "id": "0ce1ba64-a387-4c94-bc83-6a90c73fd784",
+    "name": "Búsqueda con lugar no válido",
+    "commands": [{
+      "id": "a6a9ec75-6932-4c73-a3a2-26e39da15180",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/html/busqueda.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ba6b88d1-c942-4ed6-91f6-6bd3757fb8d9",
+      "comment": "",
+      "command": "type",
+      "target": "id=lugar-hotel",
+      "targets": [
+        ["id=lugar-hotel", "id"],
+        ["css=#lugar-hotel", "css:finder"],
+        ["xpath=//input[@id='lugar-hotel']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/label[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Bariloche&$#&"
+    }, {
+      "id": "aaa468d2-bfa6-4469-a8aa-d05b767bee22",
+      "comment": "",
+      "command": "type",
+      "target": "id=cantidad-huesped",
+      "targets": [
+        ["id=cantidad-huesped", "id"],
+        ["css=#cantidad-huesped", "css:finder"],
+        ["xpath=//input[@id='cantidad-huesped']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/label[3]/input", "xpath:idRelative"],
+        ["xpath=//label[3]/input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "a1dfb280-a112-4994-b752-a165f00db852",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-desde",
+      "targets": [
+        ["id=fecha-desde", "id"],
+        ["css=#fecha-desde", "css:finder"],
+        ["xpath=//input[@id='fecha-desde']", "xpath:attributes"],
+        ["xpath=//label[@id='fecha-d']/input", "xpath:idRelative"],
+        ["xpath=//section/label/input", "xpath:position"]
+      ],
+      "value": "2023-06-16"
+    }, {
+      "id": "5ab9d2c0-e269-4e1e-8d97-98464ee54f20",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-hasta",
+      "targets": [
+        ["id=fecha-hasta", "id"],
+        ["css=#fecha-hasta", "css:finder"],
+        ["xpath=//input[@id='fecha-hasta']", "xpath:attributes"],
+        ["xpath=//label[@id='fecha-h']/input", "xpath:idRelative"],
+        ["xpath=//section/label[2]/input", "xpath:position"]
+      ],
+      "value": "2023-06-20"
+    }, {
+      "id": "196d1bd7-c898-489e-8b07-2d7182c32be3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-buscar",
+      "targets": [
+        ["css=.btn-buscar", "css:finder"],
+        ["xpath=//input[@value='Buscar']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "63ad8254-50d7-487b-b2ae-33facccb44a6",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css:finder"],
+        ["xpath=//div[@id='lista']/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'No hay coincidencias con los filtros de su búsqueda')]", "xpath:innerText"]
+      ],
+      "value": "No hay coincidencias con los filtros de su búsqueda"
+    }]
+  }, {
+    "id": "af9277b1-e682-41c4-bc92-9db4ff3c715b",
+    "name": "Búsqueda con lugar menor a 5 caracteres",
+    "commands": [{
+      "id": "5621f06b-69ad-4c5c-bb89-3347bf7a2f1b",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/html/busqueda.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "92cae902-6630-4c57-9bd0-975c3d2e8ea0",
+      "comment": "",
+      "command": "type",
+      "target": "id=lugar-hotel",
+      "targets": [
+        ["id=lugar-hotel", "id"],
+        ["css=#lugar-hotel", "css:finder"],
+        ["xpath=//input[@id='lugar-hotel']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/label[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Bari"
+    }, {
+      "id": "d1ec22c6-3bc1-4a23-bbee-772a60394f48",
+      "comment": "",
+      "command": "type",
+      "target": "id=cantidad-huesped",
+      "targets": [
+        ["id=cantidad-huesped", "id"],
+        ["css=#cantidad-huesped", "css:finder"],
+        ["xpath=//input[@id='cantidad-huesped']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/label[3]/input", "xpath:idRelative"],
+        ["xpath=//label[3]/input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "66265f75-8363-4d4d-9f7b-e9a48f6b103b",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-desde",
+      "targets": [
+        ["id=fecha-desde", "id"],
+        ["css=#fecha-desde", "css:finder"],
+        ["xpath=//input[@id='fecha-desde']", "xpath:attributes"],
+        ["xpath=//label[@id='fecha-d']/input", "xpath:idRelative"],
+        ["xpath=//section/label/input", "xpath:position"]
+      ],
+      "value": "2023-06-16"
+    }, {
+      "id": "79e404b6-99dd-48e5-81b1-c938b07601d7",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-hasta",
+      "targets": [
+        ["id=fecha-hasta", "id"],
+        ["css=#fecha-hasta", "css:finder"],
+        ["xpath=//input[@id='fecha-hasta']", "xpath:attributes"],
+        ["xpath=//label[@id='fecha-h']/input", "xpath:idRelative"],
+        ["xpath=//section/label[2]/input", "xpath:position"]
+      ],
+      "value": "2023-06-20"
+    }, {
+      "id": "18498a96-f3cd-483c-93bb-494222a4b87d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-buscar",
+      "targets": [
+        ["css=.btn-buscar", "css:finder"],
+        ["xpath=//input[@value='Buscar']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "335cd7c3-2c85-4703-a427-def7816267dc",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css:finder"],
+        ["xpath=//div[@id='lista']/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'No hay coincidencias con los filtros de su búsqueda')]", "xpath:innerText"]
+      ],
+      "value": "No hay coincidencias con los filtros de su búsqueda"
+    }]
+  }, {
+    "id": "67ccae3d-25bf-4866-9c47-a298eb06dc5c",
+    "name": "Busqueda con fecha desde inválida",
+    "commands": [{
+      "id": "392e4a43-b344-4865-94ec-825263735cd6",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/html/busqueda.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2dec871a-4bda-49ad-b9a2-8a5720ee1fd6",
+      "comment": "",
+      "command": "type",
+      "target": "id=lugar-hotel",
+      "targets": [
+        ["id=lugar-hotel", "id"],
+        ["css=#lugar-hotel", "css:finder"],
+        ["xpath=//input[@id='lugar-hotel']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/label[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Bariloche"
+    }, {
+      "id": "3a16a69d-125b-4e44-95ca-cda1ab7c876a",
+      "comment": "",
+      "command": "type",
+      "target": "id=cantidad-huesped",
+      "targets": [
+        ["id=cantidad-huesped", "id"],
+        ["css=#cantidad-huesped", "css:finder"],
+        ["xpath=//input[@id='cantidad-huesped']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/label[3]/input", "xpath:idRelative"],
+        ["xpath=//label[3]/input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "f7a72fb1-5d2a-400a-9a90-5027e0a187a2",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-desde",
+      "targets": [
+        ["id=fecha-desde", "id"],
+        ["css=#fecha-desde", "css:finder"],
+        ["xpath=//input[@id='fecha-desde']", "xpath:attributes"],
+        ["xpath=//label[@id='fecha-d']/input", "xpath:idRelative"],
+        ["xpath=//section/label/input", "xpath:position"]
+      ],
+      "value": "2012-06-08"
+    }, {
+      "id": "da4b0787-120f-4428-ba6b-6424790ffc50",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-hasta",
+      "targets": [
+        ["id=fecha-hasta", "id"],
+        ["css=#fecha-hasta", "css:finder"],
+        ["xpath=//input[@id='fecha-hasta']", "xpath:attributes"],
+        ["xpath=//label[@id='fecha-h']/input", "xpath:idRelative"],
+        ["xpath=//section/label[2]/input", "xpath:position"]
+      ],
+      "value": "2023-06-20"
+    }, {
+      "id": "0c453c52-8c3f-4569-9e45-5912f5eefad6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-buscar",
+      "targets": [
+        ["css=.btn-buscar", "css:finder"],
+        ["xpath=//input[@value='Buscar']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "74bfb936-3fc7-4a6c-8b5c-cddee9657933",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css:finder"],
+        ["xpath=//div[@id='lista']/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'No hay coincidencias con los filtros de su búsqueda')]", "xpath:innerText"]
+      ],
+      "value": "No hay coincidencias con los filtros de su búsqueda"
+    }]
+  }, {
+    "id": "5154571c-f6a0-4349-9a20-4609e471e5a4",
+    "name": "Busqueda con fecha hasta inválida",
+    "commands": [{
+      "id": "b044dd56-503b-4d85-9720-2d43705a9105",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/html/busqueda.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f981d709-80c0-4e7e-a39f-401381111853",
+      "comment": "",
+      "command": "type",
+      "target": "id=lugar-hotel",
+      "targets": [
+        ["id=lugar-hotel", "id"],
+        ["css=#lugar-hotel", "css:finder"],
+        ["xpath=//input[@id='lugar-hotel']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/label[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Bariloche"
+    }, {
+      "id": "3d5bd48a-5338-4282-b61d-52dffee8d71d",
+      "comment": "",
+      "command": "type",
+      "target": "id=cantidad-huesped",
+      "targets": [
+        ["id=cantidad-huesped", "id"],
+        ["css=#cantidad-huesped", "css:finder"],
+        ["xpath=//input[@id='cantidad-huesped']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/label[3]/input", "xpath:idRelative"],
+        ["xpath=//label[3]/input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "da3b7343-557d-415c-bc58-2904e438aab4",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-desde",
+      "targets": [
+        ["id=fecha-desde", "id"],
+        ["css=#fecha-desde", "css:finder"],
+        ["xpath=//input[@id='fecha-desde']", "xpath:attributes"],
+        ["xpath=//label[@id='fecha-d']/input", "xpath:idRelative"],
+        ["xpath=//section/label/input", "xpath:position"]
+      ],
+      "value": "2023-06-16"
+    }, {
+      "id": "be00dd16-b387-4ad7-8736-1e0d1a31066f",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-hasta",
+      "targets": [
+        ["id=fecha-hasta", "id"],
+        ["css=#fecha-hasta", "css:finder"],
+        ["xpath=//input[@id='fecha-hasta']", "xpath:attributes"],
+        ["xpath=//label[@id='fecha-h']/input", "xpath:idRelative"],
+        ["xpath=//section/label[2]/input", "xpath:position"]
+      ],
+      "value": "2012-06-08"
+    }, {
+      "id": "3bebd456-ee81-4839-8aee-7cc68469480c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-buscar",
+      "targets": [
+        ["css=.btn-buscar", "css:finder"],
+        ["xpath=//input[@value='Buscar']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b4866ce-2df6-46c6-a9ef-a97229642abf",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css:finder"],
+        ["xpath=//div[@id='lista']/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'No hay coincidencias con los filtros de su búsqueda')]", "xpath:innerText"]
+      ],
+      "value": "No hay coincidencias con los filtros de su búsqueda"
+    }]
+  }, {
+    "id": "ed25355a-9344-4875-a515-a1336db2ada9",
+    "name": "Busqueda con cantidad de huespedes no válido",
+    "commands": [{
+      "id": "c6290b7e-b442-4b12-983f-a3bcb50d4d0f",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/html/busqueda.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aae5ab16-2cad-43f6-90b2-9f759cedade9",
+      "comment": "",
+      "command": "type",
+      "target": "id=lugar-hotel",
+      "targets": [
+        ["id=lugar-hotel", "id"],
+        ["css=#lugar-hotel", "css:finder"],
+        ["xpath=//input[@id='lugar-hotel']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/label[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Bariloche"
+    }, {
+      "id": "251873f2-990f-4cf2-b658-dadf50855434",
+      "comment": "",
+      "command": "type",
+      "target": "id=cantidad-huesped",
+      "targets": [
+        ["id=cantidad-huesped", "id"],
+        ["css=#cantidad-huesped", "css:finder"],
+        ["xpath=//input[@id='cantidad-huesped']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/label[3]/input", "xpath:idRelative"],
+        ["xpath=//label[3]/input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "94d1eab8-2abb-4498-b05d-5f1b4235ba5b",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-desde",
+      "targets": [
+        ["id=fecha-desde", "id"],
+        ["css=#fecha-desde", "css:finder"],
+        ["xpath=//input[@id='fecha-desde']", "xpath:attributes"],
+        ["xpath=//label[@id='fecha-d']/input", "xpath:idRelative"],
+        ["xpath=//section/label/input", "xpath:position"]
+      ],
+      "value": "2023-06-16"
+    }, {
+      "id": "7ec8d14f-731a-4bbd-ae52-195861743611",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-hasta",
+      "targets": [
+        ["id=fecha-hasta", "id"],
+        ["css=#fecha-hasta", "css:finder"],
+        ["xpath=//input[@id='fecha-hasta']", "xpath:attributes"],
+        ["xpath=//label[@id='fecha-h']/input", "xpath:idRelative"],
+        ["xpath=//section/label[2]/input", "xpath:position"]
+      ],
+      "value": "2023-06-20"
+    }, {
+      "id": "26df8745-1d86-48d0-bad6-b38faab4199a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-buscar",
+      "targets": [
+        ["css=.btn-buscar", "css:finder"],
+        ["xpath=//input[@value='Buscar']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1160b7c4-b924-4fa0-9f56-f964360f3a14",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css:finder"],
+        ["xpath=//div[@id='lista']/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'No hay coincidencias con los filtros de su búsqueda')]", "xpath:innerText"]
+      ],
+      "value": "No hay coincidencias con los filtros de su búsqueda"
+    }]
+  }, {
+    "id": "6220b7d4-8934-4db0-9728-13bcdc4409f8",
+    "name": "Busqueda con fecha desde inválida mayor a rango",
+    "commands": [{
+      "id": "90cf9064-7fa6-4f86-8eac-33aea5f74053",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/html/busqueda.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "365578b6-41a9-453c-a940-0f927957d1c2",
+      "comment": "",
+      "command": "type",
+      "target": "id=lugar-hotel",
+      "targets": [
+        ["id=lugar-hotel", "id"],
+        ["css=#lugar-hotel", "css:finder"],
+        ["xpath=//input[@id='lugar-hotel']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/label[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Bariloche"
+    }, {
+      "id": "f457db98-abf5-4417-9bf7-7f456ac655f7",
+      "comment": "",
+      "command": "type",
+      "target": "id=cantidad-huesped",
+      "targets": [
+        ["id=cantidad-huesped", "id"],
+        ["css=#cantidad-huesped", "css:finder"],
+        ["xpath=//input[@id='cantidad-huesped']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/label[3]/input", "xpath:idRelative"],
+        ["xpath=//label[3]/input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "9635cec2-fd69-4c57-aa48-c2dd791c33ef",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-desde",
+      "targets": [
+        ["id=fecha-desde", "id"],
+        ["css=#fecha-desde", "css:finder"],
+        ["xpath=//input[@id='fecha-desde']", "xpath:attributes"],
+        ["xpath=//label[@id='fecha-d']/input", "xpath:idRelative"],
+        ["xpath=//section/label/input", "xpath:position"]
+      ],
+      "value": "2024-08-06"
+    }, {
+      "id": "2fab2c3c-16f2-4a39-8b3f-4d20a43515b7",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-hasta",
+      "targets": [
+        ["id=fecha-hasta", "id"],
+        ["css=#fecha-hasta", "css:finder"],
+        ["xpath=//input[@id='fecha-hasta']", "xpath:attributes"],
+        ["xpath=//label[@id='fecha-h']/input", "xpath:idRelative"],
+        ["xpath=//section/label[2]/input", "xpath:position"]
+      ],
+      "value": "2023-06-20"
+    }, {
+      "id": "10a92b42-836b-4f70-84e3-b0fc58b102e5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-buscar",
+      "targets": [
+        ["css=.btn-buscar", "css:finder"],
+        ["xpath=//input[@value='Buscar']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cee00dd4-5ef4-4865-921a-920c01ad27ce",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css:finder"],
+        ["xpath=//div[@id='lista']/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'No hay coincidencias con los filtros de su búsqueda')]", "xpath:innerText"]
+      ],
+      "value": "No hay coincidencias con los filtros de su búsqueda"
+    }]
+  }, {
+    "id": "824ca524-4f6c-4c6b-9b86-6b4f535f0c8f",
+    "name": "Busqueda con fecha hasta inválida mayor a rango",
+    "commands": [{
+      "id": "89e8ca7d-4dc9-45d4-9c67-7ae3d107838a",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/html/busqueda.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d5a74c26-b107-4b51-a233-2cedfabf21b6",
+      "comment": "",
+      "command": "type",
+      "target": "id=lugar-hotel",
+      "targets": [
+        ["id=lugar-hotel", "id"],
+        ["css=#lugar-hotel", "css:finder"],
+        ["xpath=//input[@id='lugar-hotel']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/label[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Bariloche"
+    }, {
+      "id": "6d14b8f8-a411-4364-a37e-c103bc4a8065",
+      "comment": "",
+      "command": "type",
+      "target": "id=cantidad-huesped",
+      "targets": [
+        ["id=cantidad-huesped", "id"],
+        ["css=#cantidad-huesped", "css:finder"],
+        ["xpath=//input[@id='cantidad-huesped']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/label[3]/input", "xpath:idRelative"],
+        ["xpath=//label[3]/input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "0efc1513-86a3-4e2e-8d0a-5c1317d4202d",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-desde",
+      "targets": [
+        ["id=fecha-desde", "id"],
+        ["css=#fecha-desde", "css:finder"],
+        ["xpath=//input[@id='fecha-desde']", "xpath:attributes"],
+        ["xpath=//label[@id='fecha-d']/input", "xpath:idRelative"],
+        ["xpath=//section/label/input", "xpath:position"]
+      ],
+      "value": "2023-06-16"
+    }, {
+      "id": "5eefaf76-a396-42db-a9ad-6a2cd8509fba",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-hasta",
+      "targets": [
+        ["id=fecha-hasta", "id"],
+        ["css=#fecha-hasta", "css:finder"],
+        ["xpath=//input[@id='fecha-hasta']", "xpath:attributes"],
+        ["xpath=//label[@id='fecha-h']/input", "xpath:idRelative"],
+        ["xpath=//section/label[2]/input", "xpath:position"]
+      ],
+      "value": "2023-08-24"
+    }, {
+      "id": "0a93aae6-b2d7-43b1-b272-05aee91aa3df",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-buscar",
+      "targets": [
+        ["css=.btn-buscar", "css:finder"],
+        ["xpath=//input[@value='Buscar']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "478d1eb5-71b1-405d-b847-2fa09cea7c16",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css:finder"],
+        ["xpath=//div[@id='lista']/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'No hay coincidencias con los filtros de su búsqueda')]", "xpath:innerText"]
+      ],
+      "value": "No hay coincidencias con los filtros de su búsqueda"
+    }]
+  }, {
+    "id": "b318df05-8130-4ee8-909c-09a61292f504",
+    "name": "Busqueda con cantidad de huespedes mayor a rango",
+    "commands": [{
+      "id": "faca4f19-2c49-4f43-a435-eca8cbe69d10",
+      "comment": "",
+      "command": "open",
+      "target": "http://127.0.0.1:5500/html/busqueda.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "80c5f20b-17e8-4292-bbfe-42528abb4f40",
+      "comment": "",
+      "command": "type",
+      "target": "id=lugar-hotel",
+      "targets": [
+        ["id=lugar-hotel", "id"],
+        ["css=#lugar-hotel", "css:finder"],
+        ["xpath=//input[@id='lugar-hotel']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/label[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Bariloche"
+    }, {
+      "id": "2a76e57a-765c-4a01-bea3-f99f66725134",
+      "comment": "",
+      "command": "type",
+      "target": "id=cantidad-huesped",
+      "targets": [
+        ["id=cantidad-huesped", "id"],
+        ["css=#cantidad-huesped", "css:finder"],
+        ["xpath=//input[@id='cantidad-huesped']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/label[3]/input", "xpath:idRelative"],
+        ["xpath=//label[3]/input", "xpath:position"]
+      ],
+      "value": "8"
+    }, {
+      "id": "200b395d-491b-43ac-9be9-fcda9965417d",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-desde",
+      "targets": [
+        ["id=fecha-desde", "id"],
+        ["css=#fecha-desde", "css:finder"],
+        ["xpath=//input[@id='fecha-desde']", "xpath:attributes"],
+        ["xpath=//label[@id='fecha-d']/input", "xpath:idRelative"],
+        ["xpath=//section/label/input", "xpath:position"]
+      ],
+      "value": "2023-06-16"
+    }, {
+      "id": "0c179c2b-f839-4bc3-a10e-c717c9d286a5",
+      "comment": "",
+      "command": "type",
+      "target": "id=fecha-hasta",
+      "targets": [
+        ["id=fecha-hasta", "id"],
+        ["css=#fecha-hasta", "css:finder"],
+        ["xpath=//input[@id='fecha-hasta']", "xpath:attributes"],
+        ["xpath=//label[@id='fecha-h']/input", "xpath:idRelative"],
+        ["xpath=//section/label[2]/input", "xpath:position"]
+      ],
+      "value": "2023-06-20"
+    }, {
+      "id": "ae525f9c-1f39-41b7-870d-4b4338ce628b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-buscar",
+      "targets": [
+        ["css=.btn-buscar", "css:finder"],
+        ["xpath=//input[@value='Buscar']", "xpath:attributes"],
+        ["xpath=//div[@id='filtros']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a5a3cf33-a24f-4a35-b010-70657c33e9c3",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css:finder"],
+        ["xpath=//div[@id='lista']/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'No hay coincidencias con los filtros de su búsqueda')]", "xpath:innerText"]
+      ],
+      "value": "No hay coincidencias con los filtros de su búsqueda"
     }]
   }],
   "suites": [{
