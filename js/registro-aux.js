@@ -126,7 +126,9 @@ function showAlert(message) {
         background-color: #2224;
         width: 100%;
         height: 100%;
-        position: absolute;
+        position: fixed;
+        left: 0;
+        top: 0;
         display: flex;
         justify-content: center;
         align-items: center;

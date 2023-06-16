@@ -6,10 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-header.css">
+    <link rel="stylesheet" href="../css/style-footer.css">
     <link rel="stylesheet" href="../css/registro.css">
 </head>
 
 <body>
+    <header>
+        <a href="./index.html"><span class="logo-container"><img src="../icons/hat.png" class="logo"
+                    alt="hat-logo"><p><span class="selected-letter">H</span>oteles <span class="selected-letter">A</span>l <span class="selected-letter">T</span>oque</p></span></a>
+        <nav class="nav-container">
+            <ul class="list">
+                <a href="busqueda.html">
+                    <li class="nav-item"><img src="" class="icon" alt="">Hoteles</li>
+                </a>
+                <a href="login.html">
+                    <li class="nav-item"><img src="" class="icon" alt="">Iniciar Sesión</li>
+                </a>
+                <a href="registro.html">
+                    <li class="nav-item"><img src="" class="icon" alt="">Registrarse</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
     <div class="container">
         <main class="form-box-register form-box">
             <h2 class="title">Registro</h2>
@@ -48,11 +67,36 @@
 
                 </section>
 
-
                 <button type="submit" class="btn">Registrarse</button>
             </form>
         </main>
     </div>
+      
+    <footer>
+        <div class="footer-container">
+            <div class="box">
+                <figure>
+                    <a href=""><h2><span>H</span>oteles <span>A</span>l <span>T</span>oque</h2></a>
+                    <small>&copy;2023 -Todos los derechos reservados.</small>
+                </figure> 
+            </div>
+            <div class="box">
+                <h2>Contactenos!</h2>
+                <p>Email: hat@gmail.com</p>
+            </div>
+            <div class="box">
+                <h2 class="follow">Siguenos</h2>
+                <div class="redes">
+                    <a href="" class="facebook">f</a>
+                    <a href=""class="Twitter">t</a>
+                    <a href=""class="Instagram">i</a>
+                </div>
+            </div>
+            <div>
+                <button class="btn-reclamo"><a href="reclamos.html">Reclamos</a></button>
+            </div>
+        </div>
+    </footer>
     <script src="../js/registro.js"></script>
     <script src="../js/registro-aux.js"></script>
     <script src="../js/userDB.js"></script>

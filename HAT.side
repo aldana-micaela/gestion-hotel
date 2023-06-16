@@ -14,6 +14,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "c0340e13-f2af-46a3-bfa0-25164cf3ca75",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1024x768",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "3e7ae752-0b54-481e-b11f-3e020a78ae18",
       "comment": "",
       "command": "click",
@@ -298,10 +305,10 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "19ec4e98-816e-43d4-8513-aac703ae99ce",
+      "id": "0e1417fd-20cf-4ffd-a3cd-e5cb4c8b04cd",
       "comment": "",
       "command": "setWindowSize",
-      "target": "945x692",
+      "target": "1024x768",
       "targets": [],
       "value": ""
     }, {
@@ -703,7 +710,7 @@
       "id": "40ee69a2-a8bd-4644-b901-3487acc5e5de",
       "comment": "",
       "command": "setWindowSize",
-      "target": "945x692",
+      "target": "1024x768",
       "targets": [],
       "value": ""
     }, {
@@ -1102,10 +1109,10 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "74a34113-565a-4f43-a180-9d15a005224f",
+      "id": "83e7b1a0-9a71-4d9f-8670-d0fe5fcee7f4",
       "comment": "",
       "command": "setWindowSize",
-      "target": "945x692",
+      "target": "1024x768",
       "targets": [],
       "value": ""
     }, {
@@ -1433,10 +1440,10 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "1547a85c-031b-4b03-b180-cbc4a5fc0c15",
+      "id": "38324fef-1465-42c7-8425-e3bfba5b7dcd",
       "comment": "",
       "command": "setWindowSize",
-      "target": "945x692",
+      "target": "1024x768",
       "targets": [],
       "value": ""
     }, {
@@ -1751,6 +1758,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "9d726c57-2bd2-4cfd-a290-1f5fbcd37bc5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1024x768",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "7a89e3b5-380a-4495-ab40-e36e26704586",
       "comment": "",
       "command": "click",
@@ -2000,10 +2014,10 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "4e6c2618-1bd7-498c-a366-0eaf3df6cbe3",
+      "id": "4509ec25-0976-4f11-aec5-8a6f6b28311a",
       "comment": "",
       "command": "setWindowSize",
-      "target": "800x900",
+      "target": "1024x768",
       "targets": [],
       "value": ""
     }, {
@@ -2278,6 +2292,13 @@
       "comment": "",
       "command": "open",
       "target": "/html/registro.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a6c882aa-1c2b-4809-9174-f08caaa271be",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1024x768",
       "targets": [],
       "value": ""
     }, {
@@ -2562,6 +2583,13 @@
       "comment": "",
       "command": "open",
       "target": "/html/registro.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5826d61e-6030-4041-98fd-7539292c1402",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1024x768",
       "targets": [],
       "value": ""
     }, {
