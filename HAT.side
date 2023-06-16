@@ -14,6 +14,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "c0340e13-f2af-46a3-bfa0-25164cf3ca75",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1024x768",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "3e7ae752-0b54-481e-b11f-3e020a78ae18",
       "comment": "",
       "command": "click",
@@ -298,10 +305,10 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "19ec4e98-816e-43d4-8513-aac703ae99ce",
+      "id": "0e1417fd-20cf-4ffd-a3cd-e5cb4c8b04cd",
       "comment": "",
       "command": "setWindowSize",
-      "target": "945x692",
+      "target": "1024x768",
       "targets": [],
       "value": ""
     }, {
@@ -669,6 +676,58 @@
       ],
       "value": "123"
     }, {
+      "id": "86f496a9-bbc7-4760-ab54-96701584e594",
+      "comment": "",
+      "command": "click",
+      "target": "id=card-bank",
+      "targets": [
+        ["id=card-bank", "id"],
+        ["css=#card-bank", "css:finder"],
+        ["xpath=//input[@id='card-bank']", "xpath:attributes"],
+        ["xpath=//section[@id='payment-box']/div/input[5]", "xpath:idRelative"],
+        ["xpath=//div/input[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4494592-80c7-4981-991f-4dcae36245f1",
+      "comment": "",
+      "command": "type",
+      "target": "id=card-bank",
+      "targets": [
+        ["id=card-bank", "id"],
+        ["css=#card-bank", "css:finder"],
+        ["xpath=//input[@id='card-bank']", "xpath:attributes"],
+        ["xpath=//section[@id='payment-box']/div/input[5]", "xpath:idRelative"],
+        ["xpath=//div/input[5]", "xpath:position"]
+      ],
+      "value": "Supermielle"
+    }, {
+      "id": "c642c102-bcea-4224-ad37-752afbd2b1f2",
+      "comment": "",
+      "command": "click",
+      "target": "id=card-dues",
+      "targets": [
+        ["id=card-dues", "id"],
+        ["css=#card-dues", "css:finder"],
+        ["xpath=//input[@id='card-dues']", "xpath:attributes"],
+        ["xpath=//section[@id='payment-box']/div/input[6]", "xpath:idRelative"],
+        ["xpath=//div/input[6]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "608f1672-d722-442b-a4a1-57010dbe879e",
+      "comment": "",
+      "command": "type",
+      "target": "id=card-dues",
+      "targets": [
+        ["id=card-dues", "id"],
+        ["css=#card-dues", "css:finder"],
+        ["xpath=//input[@id='card-dues']", "xpath:attributes"],
+        ["xpath=//section[@id='payment-box']/div/input[6]", "xpath:idRelative"],
+        ["xpath=//div/input[6]", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
       "id": "290854f1-1f47-499e-ad44-78af3dc4dff2",
       "comment": "",
       "command": "click",
@@ -703,7 +762,7 @@
       "id": "40ee69a2-a8bd-4644-b901-3487acc5e5de",
       "comment": "",
       "command": "setWindowSize",
-      "target": "945x692",
+      "target": "1024x768",
       "targets": [],
       "value": ""
     }, {
@@ -1071,6 +1130,32 @@
       ],
       "value": "123"
     }, {
+      "id": "e052dd9b-a359-4e75-bb09-596a2fbe7dc1",
+      "comment": "",
+      "command": "click",
+      "target": "id=card-bank",
+      "targets": [
+        ["id=card-bank", "id"],
+        ["css=#card-bank", "css:finder"],
+        ["xpath=//input[@id='card-bank']", "xpath:attributes"],
+        ["xpath=//section[@id='payment-box']/div/input[5]", "xpath:idRelative"],
+        ["xpath=//div/input[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "76b3c01e-a1aa-48c1-9edb-98e07826afb4",
+      "comment": "",
+      "command": "type",
+      "target": "id=card-bank",
+      "targets": [
+        ["id=card-bank", "id"],
+        ["css=#card-bank", "css:finder"],
+        ["xpath=//input[@id='card-bank']", "xpath:attributes"],
+        ["xpath=//section[@id='payment-box']/div/input[5]", "xpath:idRelative"],
+        ["xpath=//div/input[5]", "xpath:position"]
+      ],
+      "value": "Supermielle"
+    }, {
       "id": "120d2097-eadf-455a-b44f-6682ab82d898",
       "comment": "",
       "command": "click",
@@ -1102,10 +1187,10 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "74a34113-565a-4f43-a180-9d15a005224f",
+      "id": "83e7b1a0-9a71-4d9f-8670-d0fe5fcee7f4",
       "comment": "",
       "command": "setWindowSize",
-      "target": "945x692",
+      "target": "1024x768",
       "targets": [],
       "value": ""
     }, {
@@ -1389,6 +1474,19 @@
       "targets": [],
       "value": "0011223344556677889911"
     }, {
+      "id": "ae2571c0-19e1-4ee4-bf01-fac0be8749cd",
+      "comment": "",
+      "command": "click",
+      "target": "id=mp-alias",
+      "targets": [
+        ["css=option:nth-child(2)", "css:finder"],
+        ["xpath=//option[@value='credit']", "xpath:attributes"],
+        ["xpath=//select[@id='payment']/option[2]", "xpath:idRelative"],
+        ["xpath=//option[2]", "xpath:position"],
+        ["xpath=//option[contains(.,'Tarjeta de crédito')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
       "id": "e17d94b1-d2b7-42b9-8364-beec759f746c",
       "comment": "",
       "command": "type",
@@ -1401,6 +1499,26 @@
         ["xpath=//div/input[2]", "xpath:position"]
       ],
       "value": "ejemplo.mp"
+    }, {
+      "id": "fe26f7be-5424-4465-a18f-e5f1a1d6dad3",
+      "comment": "",
+      "command": "click",
+      "target": "id=mp-cuil",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registrarse')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "89420a7c-1ee8-4e6f-acd7-bf4f26f3c538",
+      "comment": "",
+      "command": "type",
+      "target": "id=mp-cuil",
+      "targets": [],
+      "value": "24123456783"
     }, {
       "id": "60b00e3f-4363-44c2-bd96-84700e47855e",
       "comment": "",
@@ -1433,10 +1551,10 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "1547a85c-031b-4b03-b180-cbc4a5fc0c15",
+      "id": "38324fef-1465-42c7-8425-e3bfba5b7dcd",
       "comment": "",
       "command": "setWindowSize",
-      "target": "945x692",
+      "target": "1024x768",
       "targets": [],
       "value": ""
     }, {
@@ -1720,6 +1838,40 @@
       "targets": [],
       "value": "0011223344556677889911"
     }, {
+      "id": "f091e5b6-b6d7-4e47-9525-bea04a1622a5",
+      "comment": "",
+      "command": "click",
+      "target": "id=alias",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "42596322-bec4-4372-bdfd-b54db3366cd1",
+      "comment": "",
+      "command": "type",
+      "target": "id=alias",
+      "targets": [],
+      "value": "ejemplo.supermielle"
+    }, {
+      "id": "c13b73a0-bc99-400a-b198-113f8e4e7949",
+      "comment": "",
+      "command": "click",
+      "target": "id=cuil",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registrarse')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f034aa2-3d33-409e-8b0a-c42de159c0f2",
+      "comment": "",
+      "command": "type",
+      "target": "id=cuil",
+      "targets": [],
+      "value": "24123456783"
+    }, {
       "id": "3b5525c2-d552-4182-84bf-2ca6e20177d7",
       "comment": "",
       "command": "click",
@@ -1748,6 +1900,13 @@
       "comment": "",
       "command": "open",
       "target": "/html/registro.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9d726c57-2bd2-4cfd-a290-1f5fbcd37bc5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1024x768",
       "targets": [],
       "value": ""
     }, {
@@ -2000,10 +2159,10 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "4e6c2618-1bd7-498c-a366-0eaf3df6cbe3",
+      "id": "4509ec25-0976-4f11-aec5-8a6f6b28311a",
       "comment": "",
       "command": "setWindowSize",
-      "target": "800x900",
+      "target": "1024x768",
       "targets": [],
       "value": ""
     }, {
@@ -2239,6 +2398,34 @@
       "targets": [],
       "value": "123456789"
     }, {
+      "id": "2080c11b-daae-4e36-83ff-3650fe861f50",
+      "comment": "",
+      "command": "click",
+      "target": "id=alias",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "849b27f5-86ee-4492-8230-567d28ca7408",
+      "comment": "",
+      "command": "type",
+      "target": "id=alias",
+      "targets": [],
+      "value": "ejemp"
+    }, {
+      "id": "4c1d5100-a59f-46ca-a4d1-bd8ac4ac84c6",
+      "comment": "",
+      "command": "click",
+      "target": "id=cuil",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "25fbdacc-f803-4951-9d34-0b222b70f846",
+      "comment": "",
+      "command": "type",
+      "target": "id=cuil",
+      "targets": [],
+      "value": "2412345673"
+    }, {
       "id": "856b0549-f682-4275-98db-09c43f8d185d",
       "comment": "",
       "command": "click",
@@ -2278,6 +2465,13 @@
       "comment": "",
       "command": "open",
       "target": "/html/registro.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a6c882aa-1c2b-4809-9174-f08caaa271be",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1024x768",
       "targets": [],
       "value": ""
     }, {
@@ -2562,6 +2756,13 @@
       "comment": "",
       "command": "open",
       "target": "/html/registro.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5826d61e-6030-4041-98fd-7539292c1402",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1024x768",
       "targets": [],
       "value": ""
     }, {
