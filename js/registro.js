@@ -118,8 +118,10 @@ function isValidPaymentData() {
         const valid_card_number = /^[0-9]{16}$/.test(payment_data.numero);
         const valid_card_code = /^[0-9]{3}$/.test(payment_data.codigo);
         const valid_card_expiration = /^(?:0[1-9]{1}[0-9]{2}|1[0-2]{1}[0-9]{2})$/.test(payment_data.expira);
-        const valid_card_bank = /^(?:[a-zA-z]+ +[a-zA-Z]+)$/.test(payment_data.banco);
-        const valid_card_dues = (payment === 'debit' ? true :/^(1|3|12|6|9|){1}$/.test(payment.data.cuotas) )
+        const valid_card_bank = /^((?![0-9.,!?:;_|+\-*\\/=%°@&#§$"'`¨^ˇ()\[\]<>{}])[\S])+$/.test(payment_data.banco);
+        const valid_card_dues = (payment === 'debit' ? true :/^(1|3|12|6|9|){1}$/.test(payment_data.cuotas) )
+        console.log(valid_card_bank);
+        console.log(valid_card_dues);
         return valid_card_name && valid_card_number && valid_card_code && valid_card_expiration && valid_card_bank && valid_card_dues;
     }
 
@@ -147,7 +149,7 @@ function createUser() {
 
 function readPaymentInput(payment) {
     let data = '';
-    if (payment == "credit" || payment == "debit"){
+    if (payment === "credit" || payment === "debit"){
         data = readPaymentCard(payment);
     } else if (payment == "mp") {
         data = readPaymentMP();
@@ -168,6 +170,7 @@ function readPaymentCard(payment) {
     if (payment === "credit") {
         ret["cuotas"] = form.querySelector("#card-dues").value;
     }
+    return ret;
 }
 
 function readPaymentMP() {
