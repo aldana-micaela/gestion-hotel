@@ -120,7 +120,6 @@ function isValidPaymentData() {
         const valid_card_expiration = /^(?:0[1-9]{1}[0-9]{2}|1[0-2]{1}[0-9]{2})$/.test(payment_data.expira);
         const valid_card_bank = /^(?:[a-zA-z]+ +[a-zA-Z]+)$/.test(payment_data.banco);
         const valid_card_dues = (payment === 'debit' ? true :/^(1|3|12|6|9|){1}$/.test(payment.data.cuotas) )
-
         return valid_card_name && valid_card_number && valid_card_code && valid_card_expiration && valid_card_bank && valid_card_dues;
     }
 

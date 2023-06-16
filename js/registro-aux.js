@@ -35,51 +35,51 @@ function createBoxCard(payment) {
     const card_number = document.createElement("INPUT");
     const card_expiration = document.createElement("INPUT");
     const card_code = document.createElement("INPUT");
+    const card_bank = document.createElement("INPUT");
 
     card_name.setAttribute("type", "text");
     card_number.setAttribute("type", "number");
     card_expiration.setAttribute("type", "number");
     card_code.setAttribute("type", "number");
+    card_bank.setAttribute("type", "text");
 
     card_name.setAttribute("placeholder", "Nombre del titular");
     card_number.setAttribute("placeholder", "Número de tarjeta");
     card_expiration.setAttribute("placeholder", "Fecha de expiración");
     card_code.setAttribute("placeholder", "Código de seguridad");
+    card_bank.setAttribute("placeholder", "Nombre del banco");
 
     card_name.setAttribute("required", "");
     card_number.setAttribute("required", "");
     card_expiration.setAttribute("required", "");
     card_code.setAttribute("required", "");
+    card_bank.setAttribute("required", "");
 
     card_name.id = "card-name";
     card_number.id = "card-number";
     card_code.id = "card-code";
     card_expiration.id = "card-expiration";
+    card_bank.id = "card-bank";
 
     card_name.classList.add("form-input");
     card_number.classList.add("form-input");
     card_expiration.classList.add("form-input", "card-input");
     card_code.classList.add("form-input", "card-input");
+    card_bank.classList.add("form-input", "card-input");
 
     box.appendChild(card_name);
     box.appendChild(card_number);
     box.appendChild(card_expiration);
     box.appendChild(card_code);
+    box.appendChild(card_bank);
 
     if (payment === "credit") {
-        const card_bank = document.createElement("INPUT");
         const card_dues = document.createElement("INPUT");
-        card_bank.setAttribute("type", "text");
         card_dues.setAttribute("type", "number");
-        card_bank.setAttribute("required", "");
         card_dues.setAttribute("required", "");
-        card_bank.setAttribute("placeholder", "Nombre del banco");
         card_dues.setAttribute("placeholder", "Cuotas");
-        card_bank.id = "card-bank";
         card_dues.id = "card-dues";
-        card_bank.classList.add("form-input", "card-input");
         card_dues.classList.add("form-input", "card-input");
-        box.appendChild(card_bank);
         box.appendChild(card_dues);
     }
 
