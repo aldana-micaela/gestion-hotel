@@ -4052,3 +4052,1007 @@
   "urls": ["http://127.0.0.1:5500/", "http://127.0.0.1:5500/html/registro.html"],
   "plugins": []
 }
+
+
+{
+  "id": "a96394e0-a4c7-4eaa-a2b4-61ca8222cb2a",
+  "version": "2.0",
+  "name": "HAT-reclamos",
+  "url": "http://127.0.0.1:5500/html/reclamos.html",
+  "tests": [{
+    "id": "57b9abfb-7bca-4a46-b7b6-ca953c29a6d5",
+    "name": "inputs vacio",
+    "commands": [{
+      "id": "18136bcc-0096-48f6-bf21-959ddb8b908f",
+      "comment": "",
+      "command": "open",
+      "target": "file:///home/usuario/Escritorio/tp-evs/html/reclamos.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "93b8e04a-9410-485f-bf59-ef79b4cb8e37",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x732",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "011af733-81d4-4081-9ae8-306f505749b9",
+      "comment": "",
+      "command": "click",
+      "target": "id=botonReclamo",
+      "targets": [
+        ["id=botonReclamo", "id"],
+        ["css=#botonReclamo", "css:finder"],
+        ["xpath=//button[@id='botonReclamo']", "xpath:attributes"],
+        ["xpath=//section[@id='wrapper']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar Nuevo Reclamo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f97dbccd-d0ec-4349-b3a6-4a9b8ef3fb9e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=botonReclamo",
+      "targets": [
+        ["id=botonReclamo", "id"],
+        ["css=#botonReclamo", "css:finder"],
+        ["xpath=//button[@id='botonReclamo']", "xpath:attributes"],
+        ["xpath=//section[@id='wrapper']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar Nuevo Reclamo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa394962-0320-4bba-ab56-fc8cca6a34c4",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=botonReclamo",
+      "targets": [
+        ["id=botonReclamo", "id"],
+        ["css=#botonReclamo", "css:finder"],
+        ["xpath=//button[@id='botonReclamo']", "xpath:attributes"],
+        ["xpath=//section[@id='wrapper']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar Nuevo Reclamo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "117b92e4-ab0d-4a5c-b783-813a798b3503",
+      "comment": "",
+      "command": "click",
+      "target": "id=confirmar",
+      "targets": [
+        ["id=confirmar", "id"],
+        ["css=#confirmar", "css:finder"],
+        ["xpath=//button[@id='confirmar']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9565762d-d20e-4516-a291-c18c9384a33e",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Reclamo Incompleto.",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "4f35a481-815e-440d-9765-bedece68cb32",
+    "name": "titulo-nombre con simbolos",
+    "commands": [{
+      "id": "42297495-7c3c-439b-ad55-da40d8e91aff",
+      "comment": "",
+      "command": "open",
+      "target": "file:///home/usuario/Escritorio/tp-evs/html/reclamos.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "efd69b0e-8d4c-42e5-882b-9f84ea04a965",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x732",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a8654920-9b9c-459b-9db6-048e25389c4c",
+      "comment": "",
+      "command": "click",
+      "target": "id=botonReclamo",
+      "targets": [
+        ["id=botonReclamo", "id"],
+        ["css=#botonReclamo", "css:finder"],
+        ["xpath=//button[@id='botonReclamo']", "xpath:attributes"],
+        ["xpath=//section[@id='wrapper']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar Nuevo Reclamo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "12f1d835-c9bd-436b-b634-7dacce374f39",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=botonReclamo",
+      "targets": [
+        ["id=botonReclamo", "id"],
+        ["css=#botonReclamo", "css:finder"],
+        ["xpath=//button[@id='botonReclamo']", "xpath:attributes"],
+        ["xpath=//section[@id='wrapper']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar Nuevo Reclamo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cbd44986-39d0-4e8e-abbd-c86bc1b463f6",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=botonReclamo",
+      "targets": [
+        ["id=botonReclamo", "id"],
+        ["css=#botonReclamo", "css:finder"],
+        ["xpath=//button[@id='botonReclamo']", "xpath:attributes"],
+        ["xpath=//section[@id='wrapper']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar Nuevo Reclamo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8c9e416-acea-4b51-b095-57746254edb4",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre_reclamo",
+      "targets": [
+        ["id=nombre_reclamo", "id"],
+        ["css=#nombre_reclamo", "css:finder"],
+        ["xpath=//input[@id='nombre_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a11925e-bb3b-4a0b-8846-c64b918fa340",
+      "comment": "",
+      "command": "type",
+      "target": "id=nombre_reclamo",
+      "targets": [
+        ["id=nombre_reclamo", "id"],
+        ["css=#nombre_reclamo", "css:finder"],
+        ["xpath=//input[@id='nombre_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "@¡¿'|°"
+    }, {
+      "id": "af6fc080-b817-4211-93e5-f382ccabe3eb",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion_reclamo",
+      "targets": [
+        ["id=descripcion_reclamo", "id"],
+        ["css=#descripcion_reclamo", "css:finder"],
+        ["xpath=//textarea[@id='descripcion_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ed440f1-b070-479e-bb9a-5e6a5c908ff5",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion_reclamo",
+      "targets": [
+        ["id=descripcion_reclamo", "id"],
+        ["css=#descripcion_reclamo", "css:finder"],
+        ["xpath=//textarea[@id='descripcion_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1fbe368f-1ed6-4e8d-a91d-1669b6c7f206",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion_reclamo",
+      "targets": [
+        ["id=descripcion_reclamo", "id"],
+        ["css=#descripcion_reclamo", "css:finder"],
+        ["xpath=//textarea[@id='descripcion_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f545a45-47ae-4ba3-9f4f-e89d9d30d020",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion_reclamo",
+      "targets": [
+        ["id=descripcion_reclamo", "id"],
+        ["css=#descripcion_reclamo", "css:finder"],
+        ["xpath=//textarea[@id='descripcion_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7bd23c0-270e-40cc-b92e-2d6483fa6ac4",
+      "comment": "",
+      "command": "type",
+      "target": "id=descripcion_reclamo",
+      "targets": [
+        ["id=descripcion_reclamo", "id"],
+        ["css=#descripcion_reclamo", "css:finder"],
+        ["xpath=//textarea[@id='descripcion_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Se hizo una reserva que no fue realizada ni pagada  con mi autorización."
+    }, {
+      "id": "bcca25f6-2697-472a-bf87-a9f1dff7a743",
+      "comment": "",
+      "command": "click",
+      "target": "id=confirmar",
+      "targets": [
+        ["id=confirmar", "id"],
+        ["css=#confirmar", "css:finder"],
+        ["xpath=//button[@id='confirmar']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb8bea4c-7423-4f6b-9018-0d4cfc1cf365",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Por favor, no ingresar numeros ni simbolos.",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "5c8cc5f7-aa9d-48f4-89bf-885bddec588b",
+    "name": "titulo-nombre con numeros",
+    "commands": [{
+      "id": "8864cf8e-20fb-45fd-b7da-3f5d1178ac93",
+      "comment": "",
+      "command": "open",
+      "target": "file:///home/usuario/Escritorio/tp-evs/html/reclamos.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "12fb2e16-ff07-4981-8c0c-74bf5ab3c77d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x732",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6da1cd22-189c-45b8-b7d0-7c32c30f45ff",
+      "comment": "",
+      "command": "click",
+      "target": "id=botonReclamo",
+      "targets": [
+        ["id=botonReclamo", "id"],
+        ["css=#botonReclamo", "css:finder"],
+        ["xpath=//button[@id='botonReclamo']", "xpath:attributes"],
+        ["xpath=//section[@id='wrapper']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar Nuevo Reclamo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "514a7201-9721-4775-8ac0-ecbc8a1fb07a",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre_reclamo",
+      "targets": [
+        ["id=nombre_reclamo", "id"],
+        ["css=#nombre_reclamo", "css:finder"],
+        ["xpath=//input[@id='nombre_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec6eb511-2c5c-4b1d-b3a0-b54ab7c30574",
+      "comment": "",
+      "command": "type",
+      "target": "id=nombre_reclamo",
+      "targets": [
+        ["id=nombre_reclamo", "id"],
+        ["css=#nombre_reclamo", "css:finder"],
+        ["xpath=//input[@id='nombre_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Se realizo pago de reserva nro123456 pero se visualiza Error404 "
+    }, {
+      "id": "337ea9c1-89e1-4df7-90ae-2d0c19f7713e",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion_reclamo",
+      "targets": [
+        ["id=descripcion_reclamo", "id"],
+        ["css=#descripcion_reclamo", "css:finder"],
+        ["xpath=//textarea[@id='descripcion_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aee59f21-f0fa-4662-ae3c-9ebe42ab8a46",
+      "comment": "",
+      "command": "type",
+      "target": "id=descripcion_reclamo",
+      "targets": [
+        ["id=descripcion_reclamo", "id"],
+        ["css=#descripcion_reclamo", "css:finder"],
+        ["xpath=//textarea[@id='descripcion_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Se hizo una reserva que no fue realizada ni pagada con mi autorización."
+    }, {
+      "id": "7c0c4b77-c368-4f20-951d-88bdc9dd8e2b",
+      "comment": "",
+      "command": "click",
+      "target": "id=confirmar",
+      "targets": [
+        ["id=confirmar", "id"],
+        ["css=#confirmar", "css:finder"],
+        ["xpath=//button[@id='confirmar']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d53a80ee-6f67-4f97-8514-de1770303567",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Por favor, no ingresar numeros ni simbolos.",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c514af7a-08ac-4b70-9b56-14eaca20fdc5",
+    "name": "titulo correcto y descripcion vacia",
+    "commands": [{
+      "id": "99b66f7d-c3ce-4099-8b8b-43b65f46acea",
+      "comment": "",
+      "command": "open",
+      "target": "file:///home/usuario/Escritorio/tp-evs/html/reclamos.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "627807f2-ba30-4172-8e91-78ee1f31ea45",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x732",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c4dc804-58c6-479d-b4fc-4398dac2d0f0",
+      "comment": "",
+      "command": "click",
+      "target": "id=botonReclamo",
+      "targets": [
+        ["id=botonReclamo", "id"],
+        ["css=#botonReclamo", "css:finder"],
+        ["xpath=//button[@id='botonReclamo']", "xpath:attributes"],
+        ["xpath=//section[@id='wrapper']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar Nuevo Reclamo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e0a104e-d3f6-4b8c-a785-fd29d56b2c90",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre_reclamo",
+      "targets": [
+        ["id=nombre_reclamo", "id"],
+        ["css=#nombre_reclamo", "css:finder"],
+        ["xpath=//input[@id='nombre_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ea5ff3a-9784-40cb-a4f2-9d71a3a25feb",
+      "comment": "",
+      "command": "type",
+      "target": "id=nombre_reclamo",
+      "targets": [
+        ["id=nombre_reclamo", "id"],
+        ["css=#nombre_reclamo", "css:finder"],
+        ["xpath=//input[@id='nombre_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "No encuentro hotel de reserva realizada dentro de la pagina wed"
+    }, {
+      "id": "3550a8cd-3041-42a9-accf-b7b66863159b",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion_reclamo",
+      "targets": [
+        ["id=descripcion_reclamo", "id"],
+        ["css=#descripcion_reclamo", "css:finder"],
+        ["xpath=//textarea[@id='descripcion_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ac02146-a81e-4100-90e4-9cdb74736c17",
+      "comment": "",
+      "command": "click",
+      "target": "id=confirmar",
+      "targets": [
+        ["id=confirmar", "id"],
+        ["css=#confirmar", "css:finder"],
+        ["xpath=//button[@id='confirmar']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d39d0d47-a992-4047-94f9-93e9c7de880b",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Reclamo Incompleto.",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6c4b3809-1db6-4282-902f-29c15ac627ed",
+    "name": "titulo vacio descripcion correcta",
+    "commands": [{
+      "id": "408e98fe-1b24-40ad-aef6-ddfb0cd9594f",
+      "comment": "",
+      "command": "open",
+      "target": "file:///home/usuario/Escritorio/tp-evs/html/reclamos.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "773c35e0-5e4d-46e6-a247-3f56792f13aa",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x732",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3c04e86-28b5-4247-affa-e2962ab78442",
+      "comment": "",
+      "command": "click",
+      "target": "id=botonReclamo",
+      "targets": [
+        ["id=botonReclamo", "id"],
+        ["css=#botonReclamo", "css:finder"],
+        ["xpath=//button[@id='botonReclamo']", "xpath:attributes"],
+        ["xpath=//section[@id='wrapper']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar Nuevo Reclamo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d49e56f-dca8-4df1-895e-e919dc524568",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre_reclamo",
+      "targets": [
+        ["id=nombre_reclamo", "id"],
+        ["css=#nombre_reclamo", "css:finder"],
+        ["xpath=//input[@id='nombre_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a5d73c6a-dc1e-4a17-8185-4377267a7e1a",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion_reclamo",
+      "targets": [
+        ["id=descripcion_reclamo", "id"],
+        ["css=#descripcion_reclamo", "css:finder"],
+        ["xpath=//textarea[@id='descripcion_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c1ed0c5-dbfb-423e-8e60-2b59ac6bde55",
+      "comment": "",
+      "command": "type",
+      "target": "id=descripcion_reclamo",
+      "targets": [
+        ["id=descripcion_reclamo", "id"],
+        ["css=#descripcion_reclamo", "css:finder"],
+        ["xpath=//textarea[@id='descripcion_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "El 3/10/2023, se hizo una reserva que no fue realizada ni pagada con mi autorización."
+    }, {
+      "id": "0e6790ac-bb1b-41c1-8551-1b9d5120913c",
+      "comment": "",
+      "command": "click",
+      "target": "id=confirmar",
+      "targets": [
+        ["id=confirmar", "id"],
+        ["css=#confirmar", "css:finder"],
+        ["xpath=//button[@id='confirmar']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "34b4e990-952c-40a3-a390-aa33b0fc53f0",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Reclamo Incompleto.",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "78e78204-4c48-4e11-b734-3e0f0f569c01",
+    "name": "Demasiados caracteres",
+    "commands": [{
+      "id": "82fcfc66-3b7c-4c70-b7e1-b5fca345735e",
+      "comment": "",
+      "command": "open",
+      "target": "file:///home/usuario/Escritorio/tp-evs/html/reclamos.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4feae6ed-3c58-47d8-b5e6-b37c28fa7cba",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x732",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dead747b-4757-4a36-8c85-8c9484b97bca",
+      "comment": "",
+      "command": "click",
+      "target": "id=botonReclamo",
+      "targets": [
+        ["id=botonReclamo", "id"],
+        ["css=#botonReclamo", "css:finder"],
+        ["xpath=//button[@id='botonReclamo']", "xpath:attributes"],
+        ["xpath=//section[@id='wrapper']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar Nuevo Reclamo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "45c61122-d2f9-47a3-9b1c-e54295b1cdf7",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=botonReclamo",
+      "targets": [
+        ["id=botonReclamo", "id"],
+        ["css=#botonReclamo", "css:finder"],
+        ["xpath=//button[@id='botonReclamo']", "xpath:attributes"],
+        ["xpath=//section[@id='wrapper']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar Nuevo Reclamo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aeb0294d-ed6e-4032-8150-f5b5dc4d193e",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=botonReclamo",
+      "targets": [
+        ["id=botonReclamo", "id"],
+        ["css=#botonReclamo", "css:finder"],
+        ["xpath=//button[@id='botonReclamo']", "xpath:attributes"],
+        ["xpath=//section[@id='wrapper']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar Nuevo Reclamo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "95c0bc82-b701-4a63-8bcc-ff20e7d013b4",
+      "comment": "",
+      "command": "type",
+      "target": "id=descripcion_reclamo",
+      "targets": [
+        ["id=descripcion_reclamo", "id"],
+        ["css=#descripcion_reclamo", "css:finder"],
+        ["xpath=//textarea[@id='descripcion_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "\"Se hizo una reserva que no fue realizada ni pagada con mi autorización.Se hizo una reserva que no fue realizada ni pagada con mi autorización.Se hizo una reserva que no fue realizada ni pagada con mi autorización.\"Se hizo una reserva que no fue realizada ni pagada con mi autorización.Se hizo una reserva que no fue realizada ni pagada con mi autorización.Se hizo una reserva que no fue realizada ni pagada con mi autorización.\""
+    }, {
+      "id": "821f1992-419d-438e-a620-9d2086434107",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre_reclamo",
+      "targets": [
+        ["id=nombre_reclamo", "id"],
+        ["css=#nombre_reclamo", "css:finder"],
+        ["xpath=//input[@id='nombre_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9bbdcba4-21aa-4d79-8e90-ad217545f4f1",
+      "comment": "",
+      "command": "type",
+      "target": "id=nombre_reclamo",
+      "targets": [
+        ["id=nombre_reclamo", "id"],
+        ["css=#nombre_reclamo", "css:finder"],
+        ["xpath=//input[@id='nombre_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
+    }, {
+      "id": "762823a5-bade-4304-863a-6c92f636e297",
+      "comment": "",
+      "command": "click",
+      "target": "id=confirmar",
+      "targets": [
+        ["id=confirmar", "id"],
+        ["css=#confirmar", "css:finder"],
+        ["xpath=//button[@id='confirmar']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "768f2325-0420-4fe5-8316-dd7421d809de",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Por favor, sea breve con el titulo y la descripcion.",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "0f98951f-2f63-41e9-9587-afc638e0f5fd",
+    "name": "titulo extenso",
+    "commands": [{
+      "id": "6b5c4363-65c7-4b6d-9fff-ab2009d7c000",
+      "comment": "",
+      "command": "open",
+      "target": "file:///home/usuario/Escritorio/tp-evs/html/reclamos.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2d6ff654-bca6-430f-82e7-30a1b1914c17",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x732",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "214bbadb-725f-4102-979c-44ed372ed555",
+      "comment": "",
+      "command": "click",
+      "target": "id=botonReclamo",
+      "targets": [
+        ["id=botonReclamo", "id"],
+        ["css=#botonReclamo", "css:finder"],
+        ["xpath=//button[@id='botonReclamo']", "xpath:attributes"],
+        ["xpath=//section[@id='wrapper']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar Nuevo Reclamo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca57a12d-4d07-4843-8245-550c93852cc7",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=botonReclamo",
+      "targets": [
+        ["id=botonReclamo", "id"],
+        ["css=#botonReclamo", "css:finder"],
+        ["xpath=//button[@id='botonReclamo']", "xpath:attributes"],
+        ["xpath=//section[@id='wrapper']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar Nuevo Reclamo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d5a019c1-94b4-4890-8d66-c8a01fa284fc",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=botonReclamo",
+      "targets": [
+        ["id=botonReclamo", "id"],
+        ["css=#botonReclamo", "css:finder"],
+        ["xpath=//button[@id='botonReclamo']", "xpath:attributes"],
+        ["xpath=//section[@id='wrapper']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar Nuevo Reclamo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f1864f0-d3d8-4bbe-855b-916060b5b4a6",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre_reclamo",
+      "targets": [
+        ["id=nombre_reclamo", "id"],
+        ["css=#nombre_reclamo", "css:finder"],
+        ["xpath=//input[@id='nombre_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b888c4b-3f0a-4aa7-8013-783326d7cf64",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre_reclamo",
+      "targets": [
+        ["id=nombre_reclamo", "id"],
+        ["css=#nombre_reclamo", "css:finder"],
+        ["xpath=//input[@id='nombre_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4e7b692-53ae-4656-a43b-8a4bb0b5f8ee",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre_reclamo",
+      "targets": [
+        ["id=nombre_reclamo", "id"],
+        ["css=#nombre_reclamo", "css:finder"],
+        ["xpath=//input[@id='nombre_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e241d0d-b965-4e27-bb6e-c0bd87685124",
+      "comment": "",
+      "command": "type",
+      "target": "id=nombre_reclamo",
+      "targets": [
+        ["id=nombre_reclamo", "id"],
+        ["css=#nombre_reclamo", "css:finder"],
+        ["xpath=//input[@id='nombre_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "ayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayudaayuda"
+    }, {
+      "id": "777adeef-cb56-4fa1-9545-15f28a7f549f",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion_reclamo",
+      "targets": [
+        ["id=descripcion_reclamo", "id"],
+        ["css=#descripcion_reclamo", "css:finder"],
+        ["xpath=//textarea[@id='descripcion_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e7fb4fa-0971-422f-a136-012c976e09a8",
+      "comment": "",
+      "command": "type",
+      "target": "id=descripcion_reclamo",
+      "targets": [
+        ["id=descripcion_reclamo", "id"],
+        ["css=#descripcion_reclamo", "css:finder"],
+        ["xpath=//textarea[@id='descripcion_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Se realizo pago de reserva nro123456 pero se visualiza Error404"
+    }, {
+      "id": "e54ea9f6-3a28-48c0-9962-a2b826ad2533",
+      "comment": "",
+      "command": "click",
+      "target": "id=confirmar",
+      "targets": [
+        ["id=confirmar", "id"],
+        ["css=#confirmar", "css:finder"],
+        ["xpath=//button[@id='confirmar']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eeb8ca2f-9e9a-4790-b85b-85fe5c3067b8",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Por favor, sea breve con el titulo y la descripcion.",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "bf333108-082e-42e0-b4a2-499634b39115",
+    "name": "Inputs correcta",
+    "commands": [{
+      "id": "750ee3cf-1fdc-4b26-82a5-592011090be3",
+      "comment": "",
+      "command": "open",
+      "target": "file:///home/usuario/Escritorio/tp-evs/html/reclamos.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d9dbcbfa-f291-4d5c-a775-b2f64b348e7a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x732",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "168a3a45-f57a-4f99-a05e-c5b8bde21b99",
+      "comment": "",
+      "command": "click",
+      "target": "id=botonReclamo",
+      "targets": [
+        ["id=botonReclamo", "id"],
+        ["css=#botonReclamo", "css:finder"],
+        ["xpath=//button[@id='botonReclamo']", "xpath:attributes"],
+        ["xpath=//section[@id='wrapper']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Realizar Nuevo Reclamo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "03708c8f-c1f4-4cff-aa89-c47474565f28",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre_reclamo",
+      "targets": [
+        ["id=nombre_reclamo", "id"],
+        ["css=#nombre_reclamo", "css:finder"],
+        ["xpath=//input[@id='nombre_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d70e20e-18a6-4cc8-b205-c7df0cc90918",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion_reclamo",
+      "targets": [
+        ["id=descripcion_reclamo", "id"],
+        ["css=#descripcion_reclamo", "css:finder"],
+        ["xpath=//textarea[@id='descripcion_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d50f33af-b622-4f61-b986-e329516d86c7",
+      "comment": "",
+      "command": "type",
+      "target": "id=descripcion_reclamo",
+      "targets": [
+        ["id=descripcion_reclamo", "id"],
+        ["css=#descripcion_reclamo", "css:finder"],
+        ["xpath=//textarea[@id='descripcion_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Reserva no autorizada"
+    }, {
+      "id": "f2a6f621-6db6-4210-ad3c-a76c6dcf4f98",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion_reclamo",
+      "targets": [
+        ["id=descripcion_reclamo", "id"],
+        ["css=#descripcion_reclamo", "css:finder"],
+        ["xpath=//textarea[@id='descripcion_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc703b9b-fcde-44d0-b6df-80d0d49103d5",
+      "comment": "",
+      "command": "click",
+      "target": "id=descripcion_reclamo",
+      "targets": [
+        ["id=descripcion_reclamo", "id"],
+        ["css=#descripcion_reclamo", "css:finder"],
+        ["xpath=//textarea[@id='descripcion_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd370d99-230c-4573-8652-be3e7040159a",
+      "comment": "",
+      "command": "type",
+      "target": "id=descripcion_reclamo",
+      "targets": [
+        ["id=descripcion_reclamo", "id"],
+        ["css=#descripcion_reclamo", "css:finder"],
+        ["xpath=//textarea[@id='descripcion_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Reserva no autorizada.Se realizo pago de reserva nro123456."
+    }, {
+      "id": "ab30c5db-3fdb-4051-9ecc-a21493ffc2b2",
+      "comment": "",
+      "command": "click",
+      "target": "id=nombre_reclamo",
+      "targets": [
+        ["id=nombre_reclamo", "id"],
+        ["css=#nombre_reclamo", "css:finder"],
+        ["xpath=//input[@id='nombre_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c2abd95-4e0c-43db-865e-46c247b15697",
+      "comment": "",
+      "command": "type",
+      "target": "id=nombre_reclamo",
+      "targets": [
+        ["id=nombre_reclamo", "id"],
+        ["css=#nombre_reclamo", "css:finder"],
+        ["xpath=//input[@id='nombre_reclamo']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Reserva no autorizada"
+    }, {
+      "id": "6ef91f09-d40b-47eb-99be-c4c3879141cf",
+      "comment": "",
+      "command": "click",
+      "target": "id=confirmar",
+      "targets": [
+        ["id=confirmar", "id"],
+        ["css=#confirmar", "css:finder"],
+        ["xpath=//button[@id='confirmar']", "xpath:attributes"],
+        ["xpath=//form[@id='form_reclamo']/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Confirmar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "36f3f384-d091-4b3e-a2ed-efa3f89f8a6d",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn-ticket",
+      "targets": [
+        ["id=btn-ticket", "id"],
+        ["css=#btn-ticket", "css:finder"],
+        ["xpath=//button[@id='btn-ticket']", "xpath:attributes"],
+        ["xpath=//section[@id='wrapper']/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Generar Ticket')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "80ec5f2c-70bc-496b-b491-80ee4c875683",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": [],
+  "plugins": []
+}
