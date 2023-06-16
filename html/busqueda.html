@@ -67,8 +67,8 @@
               
                 <label>
                     Lugar:
-                    <input class="campos" type="text" id="lugar-hotel" required placeholder="Ingresa a donde queres ir"
-                        size="60">
+                    <input class="campos" type="text" id="lugar-hotel" pattern="[A-Za-z0-9]{1,15}" required placeholder="Ingresa a donde queres ir"
+                    minlength="5" size="60">
                 </label>
                 <label>
                     Cantidad de huespedes:
