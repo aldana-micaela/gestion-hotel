@@ -89,6 +89,16 @@ label {
     margin-left: 2%;
 }
 
+#card-bank {
+    margin-left: 0;
+}
+
+#card-dues{
+    margin-left: 2%;
+    margin-right: 0;
+}
+
+
 footer {
     position: static !important;
 }

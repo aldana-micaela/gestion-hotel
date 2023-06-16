@@ -118,17 +118,24 @@ function isValidPaymentData() {
         const valid_card_number = /^[0-9]{16}$/.test(payment_data.numero);
         const valid_card_code = /^[0-9]{3}$/.test(payment_data.codigo);
         const valid_card_expiration = /^(?:0[1-9]{1}[0-9]{2}|1[0-2]{1}[0-9]{2})$/.test(payment_data.expira);
-        return valid_card_name && valid_card_number && valid_card_code && valid_card_expiration;
+        const valid_card_bank = /^(?:[a-zA-z]+ +[a-zA-Z]+)$/.test(payment_data.banco);
+        const valid_card_dues = (payment === 'debit' ? true :/^(1|3|12|6|9|){1}$/.test(payment.data.cuotas) )
+
+        return valid_card_name && valid_card_number && valid_card_code && valid_card_expiration && valid_card_bank && valid_card_dues;
     }
 
     if (payment === 'mp') {
         const valid_cvu = /^[0-9]{22}$/.test(payment_data.cvu);
         const valid_alias = /^[^,.](?:[a-zA-Z0-9]+[\.]?){6,20}[^\,.]$/.test(payment_data.alias); //alfanumérico con punto entre 6 y 22 caracteres
-        return valid_cvu && valid_alias;
+        const valid_cuil = /^[0-9]{11,14}$/.test(payment_data.cuil);
+        return valid_cvu && valid_alias && valid_cuil;
     }
 
     if (payment === 'transfer') {
-        return /^[0-9]{22}$/.test(payment_data.cbu);
+        const valid_cbu = /^[0-9]{22}$/.test(payment_data.cbu);
+        const valid_alias = /^[^,.](?:[a-zA-Z0-9]+[\.]?){6,20}[^\,.]$/.test(payment_data.alias); //alfanumérico con punto entre 6 y 22 caracteres
+        const valid_cuil = /^[0-9]{11,14}$/.test(payment_data.cuil);
+        return valid_cbu && valid_alias && valid_cuil;
     }
 
     return true;
@@ -142,7 +149,7 @@ function createUser() {
 function readPaymentInput(payment) {
     let data = '';
     if (payment == "credit" || payment == "debit"){
-        data = readPaymentCard();
+        data = readPaymentCard(payment);
     } else if (payment == "mp") {
         data = readPaymentMP();
     } else if (payment == "transfer") {
@@ -151,25 +158,32 @@ function readPaymentInput(payment) {
     return data;
 }
 
-function readPaymentCard() {
-    return {
+function readPaymentCard(payment) {
+    const ret = {
         titular : form.querySelector("#card-name").value,
         numero : form.querySelector("#card-number").value,
         codigo : form.querySelector("#card-code").value,
-        expira : form.querySelector("#card-expiration").value
+        expira : form.querySelector("#card-expiration").value,
+        banco: form.querySelector("#card-bank").value
     };
+    if (payment === "credit") {
+        ret["cuotas"] = form.querySelector("#card-dues").value;
+    }
 }
 
 function readPaymentMP() {
     return {
         cvu : form.querySelector("#mp-cvu").value,
-        alias : form.querySelector("#mp-alias").value
+        alias : form.querySelector("#mp-alias").value,
+        cuil: form.querySelector("#mp-cuil").value
     };
 }
 
 function readPaymentTransfer() {
     return {
-        cbu : form.querySelector("#cbu").value
+        cbu : form.querySelector("#cbu").value,
+        alias : form.querySelector("#alias").value,
+        cuil: form.querySelector("#cuil").value
     };
 }
 
