@@ -155,13 +155,53 @@ function mostrarFormulario(){
     botonConfirmar.type = "submit"
     botonConfirmar.innerText = "Confirmar"
     form_reclamo.appendChild(botonConfirmar)
-    botonConfirmar.addEventListener('click', mostrarReclamoRealizado)
+    /*----------------------------------------------------------------*/
+    
+    botonConfirmar.addEventListener('click', verificarReclamo)
 }
 
 
-function mostrarReclamoRealizado(event){
+function verificarReclamo(event){
     event.preventDefault()
+
     
+    var nombre=document.getElementById("nombre_reclamo").value
+    var descripcion=document.getElementById("descripcion_reclamo").value
+    var resultado=true;
+   
+    const esLetraValida = (caracter) => {
+        let ascii = caracter.toUpperCase().charCodeAt(0);
+        return (ascii > 64 && ascii < 91 ) || ascii==32;
+    };
+    
+    for(var i=0; i<nombre.length;i++){ 
+
+       resultado=resultado && (esLetraValida(nombre.charAt(i)) );
+       
+    }
+    if(resultado==false){
+        window.alert("Por favor, no ingresar numeros ni simbolos.");
+        document.getElementById('form_reclamo').reset();
+        location.reload();
+        document.getElementById("contenedorTicket").style.display = 'none';
+    }
+    if(descripcion.length>100 ||nombre.length>100){
+        window.alert("Por favor, sea breve con el titulo y la descripcion.");
+        document.getElementById('form_reclamo').reset();
+        location.reload();
+        document.getElementById("contenedorTicket").style.display = 'none';
+    }
+    if(  nombre.length<3 || nombre=="" || descripcion=="" ){
+        window.alert("Reclamo Incompleto.");
+        
+    
+    }else
+        mostrarReclamoRealizadoCorrectamente()
+
+    
+
+}
+function mostrarReclamoRealizadoCorrectamente(){
     const contenedorTicket=document.createElement("div")
     contenedorTicket.id="contenedorTicket"
     wrapper.appendChild(contenedorTicket)
@@ -181,10 +221,9 @@ function mostrarReclamoRealizado(event){
     wrapper.appendChild( botonTicket);
 
     botonTicket.addEventListener('click', generarTicket)
-    
+
 
 }
-
 
 function crearTicket(){
 
@@ -281,9 +320,9 @@ function pieDePagina() {
     nmbr_pagina.id="nmbr_pagina"
     nmbr_pagina.innerHTML="<span style='color:red;'>H</span>"+"oteles "+"<span style='color:red;'>A</span>"+"l "+"<span style='color:red;'>T</span>"+"oque"
     div1.appendChild(nmbr_pagina)
-    const derechos = document.createElement("small")
+    const derechos = document.createElement("p")
     derechos.id="small"
-    derechos.innerText="©2023 -Todos los derechos reservados."
+    derechos.innerText="2023 -Todos los derechos reservados."
     div1.appendChild(derechos)
    
     const div2 = document.createElement("div")
@@ -293,7 +332,7 @@ function pieDePagina() {
     contactenos.id="contactenos"
     contactenos.innerText="Contactenos!"
     div2.appendChild(contactenos)
-    const email = document.createElement("small")
+    const email = document.createElement("p")
     email.id="email"
     email.innerText="Email: hat@gmail.com"
     div2.appendChild(email)
