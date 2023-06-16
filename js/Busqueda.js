@@ -23,8 +23,8 @@ function Reserva(nombre, lugar, estrella, tipohabitacion, pension, precio, cantH
 }
 
 var reservaMenor= [
-    new Reserva("Oasis Hotel", "Cordoba", "3 estrellas", "Estandar", "Media Pensión", 300000, "2", '2023-06-16', '2023-06-20'),
-    new Reserva("Oasis Hotel", "Cordoba", "3 estrellas", "Premium", "Pensión completa", 38000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Oasis Hotel", "Cordoba", "1 estrella", "Estandar", "Desayuno", 300000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Oasis Hotel", "Cordoba", "1 estrella", "Estandar", "Desayuno", 38000, "2", '2023-06-16', '2023-06-20'),
     new Reserva("Hotel Los Patios", "Cordoba", "3 estrellas", "Premium", "Pensión completa", 37000, "2", '2023-06-16', '2023-06-20'),
     new Reserva("Hotel Soft Cordoba", "Cordoba", "3 estrellas", "Presidencial", "Desayuno", 40000, "2", '2023-06-16', '2023-06-20'),
     new Reserva("Hotel Soft Cordoba", "Cordoba", "3 estrellas", "Premium", "Pensión completa", 40000, "2", '2023-06-16', '2023-06-20'),
@@ -101,8 +101,8 @@ var reservaMayor = [
     new Reserva("Hotel Soft Cordoba", "Cordoba", "3 estrellas", "Premium", "Pensión completa", 40000, "2", '2023-06-16', '2023-06-20'),
     new Reserva("Oasis Hotel", "Cordoba", "3 estrellas", "Premium", "Pensión completa", 38000, "2", '2023-06-16', '2023-06-20'),
     new Reserva("Hotel Los Patios", "Cordoba", "3 estrellas", "Premium", "Pensión completa", 37000, "2", '2023-06-16', '2023-06-20'),
-    new Reserva("Hotel Soft Cordoba", "Cordoba", "3 estrellas", "Estandar", "Media Pensión", 40000, "2", '2023-06-16', '2023-06-20'),
-    new Reserva("Oasis Hotel", "Cordoba", "3 estrellas", "Estandar", "Media Pensión", 300000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Hotel Soft Cordoba", "Cordoba", "1 estrella", "Estandar", "Desayuno", 40000, "2", '2023-06-16', '2023-06-20'),
+    new Reserva("Oasis Hotel", "Cordoba", "1 estrella", "Estandar", "Desayuno", 300000, "2", '2023-06-16', '2023-06-20'),
     new Reserva("Hotel Los Patios", "Cordoba", "3 estrellas", "Presidencial", "Desayuno", 47000, "2", '2023-06-16', '2023-06-20'),
     new Reserva("Hotel Soft Cordoba", "Cordoba", "3 estrellas", "Presidencial", "Desayuno", 40000, "2", '2023-06-16', '2023-06-20')
 ]
