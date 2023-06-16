@@ -67,8 +67,8 @@
               
                 <label>
                     Lugar:
-                    <input class="campos" type="text" id="lugar-hotel" required placeholder="Ingresa a donde queres ir"
-                        size="60">
+                    <input class="campos" type="text" id="lugar-hotel" pattern="[A-Za-z0-9]{1,15}" required placeholder="Ingresa a donde queres ir"
+                    minlength="5" size="60">
                 </label>
                 <label>
                     Cantidad de huespedes:
@@ -88,12 +88,12 @@
                     </label>
                
                 </section>
-
+            
                 <div class="botones">
                     <input class="btn-buscar" type="submit" value="Buscar" onclick="mostrarReserva()"></input>
                     <button class="btn-carrito" onclick="mostrarCarrito()"> <a href="carrito.html">carrito de compras</a> </button>
                 </div>
-            </form>
+            
 
             </div>
 
