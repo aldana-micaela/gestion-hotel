@@ -112,3 +112,61 @@ function createBoxTransfer(){
 
     return box;
 }
+
+function showAlert(message) {
+    const fullBox = document.createElement("DIV");
+    const msgBox = document.createElement("SECTION");
+    const msg = document.createElement("P");
+    const acceptBtn = document.createElement("BUTTON");
+    msg.id = "msg";
+    acceptBtn.classList.add("btn");
+
+    fullBox.style.cssText = 
+    `
+        background-color: #2224;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    `;
+
+    msgBox.style.cssText =
+    `
+        width: 400px;
+        padding: 20px 10px;
+        text-align: center;
+        background-color: var(--color-dark);
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 14px;
+    `;
+
+    acceptBtn.style.cssText = 
+    `
+        max-width: 50%;
+        margin-top: 20px;
+        padding: 4px 8px;
+        align-self: center;
+    `
+
+    msg.innerHTML = message;
+
+    acceptBtn.innerHTML = "Aceptar";
+
+    msgBox.appendChild(msg);
+    msgBox.appendChild(acceptBtn);
+    fullBox.appendChild(msgBox);
+
+    const container =  document.querySelector(".container");
+    container.appendChild(fullBox);
+
+    acceptBtn.addEventListener('click', function(){
+        container.removeChild(container.lastChild);
+    });
+    
+}
